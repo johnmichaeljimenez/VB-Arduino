@@ -1,0 +1,22 @@
+system 1.5m <----  ----> 0 arduino
+
+
+off - -1
+height - 0
+pulse - 1
+weight - 2
+temp - 3
+
+
+
+1.5m 5 seconds 1.6m
+
+
+90 -> 72%
+80 -> 86%
+
+
+VB or c#
+
+
+221007

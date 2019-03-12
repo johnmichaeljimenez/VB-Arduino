@@ -24,6 +24,8 @@ Partial Class PersonalInfo
     Private Sub InitializeComponent()
         Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.txtPatientNo = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.txtLastName = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -42,8 +44,6 @@ Partial Class PersonalInfo
         Me.txtContact = New System.Windows.Forms.TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.btnNext = New System.Windows.Forms.Button()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.txtPatientNo = New System.Windows.Forms.TextBox()
         Me.FlowLayoutPanel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -89,6 +89,27 @@ Partial Class PersonalInfo
         Me.Label1.Size = New System.Drawing.Size(147, 18)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Personal Information"
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Font = New System.Drawing.Font("Roboto", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.Location = New System.Drawing.Point(15, 42)
+        Me.Label11.Margin = New System.Windows.Forms.Padding(3, 0, 15, 0)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(91, 18)
+        Me.Label11.TabIndex = 19
+        Me.Label11.Text = "Patient No.*"
+        '
+        'txtPatientNo
+        '
+        Me.FlowLayoutPanel1.SetFlowBreak(Me.txtPatientNo, True)
+        Me.txtPatientNo.Font = New System.Drawing.Font("Roboto", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtPatientNo.Location = New System.Drawing.Point(124, 45)
+        Me.txtPatientNo.MaxLength = 8
+        Me.txtPatientNo.Name = "txtPatientNo"
+        Me.txtPatientNo.Size = New System.Drawing.Size(162, 26)
+        Me.txtPatientNo.TabIndex = 20
         '
         'Label2
         '
@@ -273,26 +294,6 @@ Partial Class PersonalInfo
         Me.btnNext.TabIndex = 17
         Me.btnNext.Text = "Next"
         Me.btnNext.UseVisualStyleBackColor = True
-        '
-        'Label11
-        '
-        Me.Label11.AutoSize = True
-        Me.Label11.Font = New System.Drawing.Font("Roboto", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(15, 42)
-        Me.Label11.Margin = New System.Windows.Forms.Padding(3, 0, 15, 0)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(91, 18)
-        Me.Label11.TabIndex = 19
-        Me.Label11.Text = "Patient No.*"
-        '
-        'txtPatientNo
-        '
-        Me.FlowLayoutPanel1.SetFlowBreak(Me.txtPatientNo, True)
-        Me.txtPatientNo.Font = New System.Drawing.Font("Roboto", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPatientNo.Location = New System.Drawing.Point(124, 45)
-        Me.txtPatientNo.Name = "txtPatientNo"
-        Me.txtPatientNo.Size = New System.Drawing.Size(162, 26)
-        Me.txtPatientNo.TabIndex = 20
         '
         'PersonalInfo
         '
