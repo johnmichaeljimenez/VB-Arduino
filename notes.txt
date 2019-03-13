@@ -20,3 +20,11 @@ VB or c#
 
 
 221007
+
+
+letters, numbers, caps lock, enter, backspace, space
+, . - ( ) ' / ссс
+
+
+name prefix optional
+address city contact number change
