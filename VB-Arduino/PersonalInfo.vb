@@ -1,6 +1,9 @@
 ﻿Imports VB_Arduino.Utils
 
 Public Class PersonalInfo
+
+    Public Shared currentPatientNo As String
+
     Private Sub btnNext_Click(sender As Object, e As EventArgs) Handles btnNext.Click
 
     End Sub

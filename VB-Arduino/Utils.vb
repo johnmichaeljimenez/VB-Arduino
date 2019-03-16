@@ -28,3 +28,19 @@ Module Utils
     End Sub
 
 End Module
+
+Public Class Cells
+    Public Const PatientNo = "B4"
+    Public Const Name = "B6"
+    Public Const Gender = "B7"
+    Public Const Birthdate = "B8"
+    Public Const Birthplace = "B9"
+    Public Const Address = "B10"
+    Public Const ContactNo = "B11"
+    Public Const DateExamined = "A15"
+    Public Const Height = "B15"
+    Public Const Weight = "C15"
+    Public Const PulseRate = "D15"
+    Public Const Temperature = "E15"
+    Public Const BMI = "F15"
+End Class

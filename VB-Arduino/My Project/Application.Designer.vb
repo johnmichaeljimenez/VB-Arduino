@@ -32,7 +32,7 @@ Namespace My
         
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
         Protected Overrides Sub OnCreateMainForm()
-            Me.MainForm = Global.VB_Arduino.PersonalInfo
+            Me.MainForm = Global.VB_Arduino.Form1
         End Sub
     End Class
 End Namespace
