@@ -9,7 +9,7 @@ Module Utils
     End Function
 
     Public Sub PrintExcel(ByVal f As String)
-        Dim templatePath As String = progDir + "template.xlsx"
+        Dim templatePath As String = Application.StartupPath + "/template.xlsx"
         Dim savePath As String = progDir + f + ".xlsx"
 
         Dim excelApp As New Microsoft.Office.Interop.Excel.Application()
@@ -19,10 +19,41 @@ Module Utils
         excelApp.Visible = True
 
 
-        currentWorksheet.Range("A3").Value = "" 'dt.Rows[0].Field<String>("name")
+        currentWorksheet.Range(Cells.PatientNo).Value = PersonalInfo.patientNo
+        currentWorksheet.Range(Cells.Name).Value = PersonalInfo.firstName + " " + PersonalInfo.middleName + " " + PersonalInfo.surname + " " + PersonalInfo.namePrefix
+        currentWorksheet.Range(Cells.Gender).Value = PersonalInfo.gender
+        currentWorksheet.Range(Cells.Birthdate).Value = PersonalInfo.birthday
+        currentWorksheet.Range(Cells.Birthplace).Value = PersonalInfo.birthplace
+        currentWorksheet.Range(Cells.Address).Value = PersonalInfo.address
+        currentWorksheet.Range(Cells.ContactNo).Value = PersonalInfo.contactNo
+
         excelApp.DisplayAlerts = False
 
         currentWorksheet.SaveAs(savePath)
+        currentWorkbook.Close()
+        excelApp.Quit()
+    End Sub
+
+    Public Sub ReadData(ByVal f As String)
+        Dim dataPath As String = progDir + f + ".xlsx"
+
+        Dim excelApp As New Microsoft.Office.Interop.Excel.Application()
+
+        Dim currentWorkbook As Microsoft.Office.Interop.Excel.Workbook = excelApp.Workbooks.Add(dataPath)
+        Dim currentWorksheet As Microsoft.Office.Interop.Excel.Worksheet = currentWorkbook.ActiveSheet ' (Microsoft.Office.Interop.Excel.Worksheet)
+        excelApp.Visible = False
+
+
+        PersonalInfo.patientNo = currentWorksheet.Range(Cells.PatientNo).Value.ToString()
+        PersonalInfo.firstName = currentWorksheet.Range(Cells.Name).Value.ToString()
+        PersonalInfo.gender = currentWorksheet.Range(Cells.Gender).Value.ToString()
+        PersonalInfo.birthday = currentWorksheet.Range(Cells.Birthdate).Value.ToString()
+        PersonalInfo.birthplace = currentWorksheet.Range(Cells.Birthplace).Value.ToString()
+        PersonalInfo.address = currentWorksheet.Range(Cells.Address).Value.ToString()
+        PersonalInfo.contactNo = currentWorksheet.Range(Cells.ContactNo).Value.ToString()
+
+        excelApp.DisplayAlerts = False
+
         currentWorkbook.Close()
         excelApp.Quit()
     End Sub

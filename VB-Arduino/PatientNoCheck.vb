@@ -9,7 +9,7 @@
             grp1.Visible = False
             grp2.Visible = True
         Else
-            PersonalInfo.currentPatientNo = ""
+            PersonalInfo.patientNo = ""
             PersonalInfo.Show()
             Close()
         End If
@@ -29,15 +29,17 @@
         End If
 
         If CheckExcelFile(pn) Then
-            PersonalInfo.currentPatientNo = pn
+            PersonalInfo.patientNo = pn
             MessageBox.Show("You can now proceed to sensor readings.")
             'PersonalInfo.Show()
+            Utils.ReadData(pn)
+            Results.Show()
             Close()
             Exit Sub
         End If
 
         If (MessageBox.Show("Data with Patient No. " + pn + " not found. Do you want to create a new record?", "", MessageBoxButtons.YesNo) = DialogResult.Yes) Then
-            PersonalInfo.currentPatientNo = ""
+            PersonalInfo.patientNo = ""
             PersonalInfo.Show()
             Close()
         End If

@@ -2,9 +2,32 @@
 
 Public Class PersonalInfo
 
-    Public Shared currentPatientNo As String
+    Public Shared patientNo As String
+    Public Shared surname, firstName, middleName, namePrefix As String
+    Public Shared birthday, birthplace As String
+    Public Shared gender As String
+    Public Shared address, city, contactNo As String
 
     Private Sub btnNext_Click(sender As Object, e As EventArgs) Handles btnNext.Click
+        If txtPatientNo.Text = "" Or txtLastName.Text = "" Or txtMiddleName.Text = "" Or txtFirstName.Text = "" Or txtBirthPlace.Text = "" Or txtAddress.Text = "" Or txtCity.Text = "" Then
+            MsgBox("Please fill up all required fields (*)")
+            Exit Sub
+        End If
+
+        patientNo = txtPatientNo.Text
+        surname = txtLastName.Text
+        firstName = txtFirstName.Text
+        middleName = txtMiddleName.Text
+        namePrefix = txtNamePrefix.Text
+        birthday = dtBirthday.Value.ToShortDateString()
+        birthplace = txtBirthPlace.Text
+        gender = cmbGender.SelectedItem.ToString()
+        address = txtAddress.Text
+        city = txtCity.Text
+        contactNo = txtContact.Text
+
+        Results.Show()
+        Close()
 
     End Sub
 

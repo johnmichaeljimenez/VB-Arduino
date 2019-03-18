@@ -33,9 +33,11 @@ Partial Class PersonalInfo
         Me.Label4 = New System.Windows.Forms.Label()
         Me.txtMiddleName = New System.Windows.Forms.TextBox()
         Me.Label12 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.txtNamePrefix = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.dtBirthday = New System.Windows.Forms.DateTimePicker()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.txtBirthPlace = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.cmbGender = New System.Windows.Forms.ComboBox()
         Me.Label7 = New System.Windows.Forms.Label()
@@ -46,8 +48,6 @@ Partial Class PersonalInfo
         Me.txtContact = New System.Windows.Forms.TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.btnNext = New System.Windows.Forms.Button()
-        Me.Label13 = New System.Windows.Forms.Label()
-        Me.txtBirthPlace = New System.Windows.Forms.TextBox()
         Me.FlowLayoutPanel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -63,7 +63,7 @@ Partial Class PersonalInfo
         Me.FlowLayoutPanel1.Controls.Add(Me.Label4)
         Me.FlowLayoutPanel1.Controls.Add(Me.txtMiddleName)
         Me.FlowLayoutPanel1.Controls.Add(Me.Label12)
-        Me.FlowLayoutPanel1.Controls.Add(Me.TextBox1)
+        Me.FlowLayoutPanel1.Controls.Add(Me.txtNamePrefix)
         Me.FlowLayoutPanel1.Controls.Add(Me.Label5)
         Me.FlowLayoutPanel1.Controls.Add(Me.dtBirthday)
         Me.FlowLayoutPanel1.Controls.Add(Me.Label13)
@@ -187,13 +187,13 @@ Partial Class PersonalInfo
         Me.Label12.TabIndex = 21
         Me.Label12.Text = "Prefix"
         '
-        'TextBox1
+        'txtNamePrefix
         '
-        Me.TextBox1.Font = New System.Drawing.Font("Roboto", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(249, 109)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(162, 26)
-        Me.TextBox1.TabIndex = 22
+        Me.txtNamePrefix.Font = New System.Drawing.Font("Roboto", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtNamePrefix.Location = New System.Drawing.Point(249, 109)
+        Me.txtNamePrefix.Name = "txtNamePrefix"
+        Me.txtNamePrefix.Size = New System.Drawing.Size(162, 26)
+        Me.txtNamePrefix.TabIndex = 22
         '
         'Label5
         '
@@ -218,11 +218,30 @@ Partial Class PersonalInfo
         Me.dtBirthday.TabIndex = 7
         Me.dtBirthday.Value = New Date(2018, 12, 31, 0, 0, 0, 0)
         '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.Font = New System.Drawing.Font("Roboto", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label13.Location = New System.Drawing.Point(221, 138)
+        Me.Label13.Margin = New System.Windows.Forms.Padding(3, 0, 15, 0)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(84, 18)
+        Me.Label13.TabIndex = 23
+        Me.Label13.Text = "Birthplace*"
+        '
+        'txtBirthPlace
+        '
+        Me.txtBirthPlace.Font = New System.Drawing.Font("Roboto", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtBirthPlace.Location = New System.Drawing.Point(323, 141)
+        Me.txtBirthPlace.Name = "txtBirthPlace"
+        Me.txtBirthPlace.Size = New System.Drawing.Size(162, 26)
+        Me.txtBirthPlace.TabIndex = 24
+        '
         'Label6
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Roboto", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(485, 138)
+        Me.Label6.Location = New System.Drawing.Point(491, 138)
         Me.Label6.Margin = New System.Windows.Forms.Padding(3, 0, 15, 0)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(63, 18)
@@ -235,7 +254,7 @@ Partial Class PersonalInfo
         Me.cmbGender.Font = New System.Drawing.Font("Roboto", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmbGender.FormattingEnabled = True
         Me.cmbGender.Items.AddRange(New Object() {"Male", "Female"})
-        Me.cmbGender.Location = New System.Drawing.Point(566, 141)
+        Me.cmbGender.Location = New System.Drawing.Point(572, 141)
         Me.cmbGender.Name = "cmbGender"
         Me.cmbGender.Size = New System.Drawing.Size(121, 26)
         Me.cmbGender.TabIndex = 10
@@ -318,25 +337,6 @@ Partial Class PersonalInfo
         Me.btnNext.Text = "Next"
         Me.btnNext.UseVisualStyleBackColor = True
         '
-        'Label13
-        '
-        Me.Label13.AutoSize = True
-        Me.Label13.Font = New System.Drawing.Font("Roboto", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.Location = New System.Drawing.Point(221, 138)
-        Me.Label13.Margin = New System.Windows.Forms.Padding(3, 0, 15, 0)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(78, 18)
-        Me.Label13.TabIndex = 23
-        Me.Label13.Text = "Birthplace"
-        '
-        'txtBirthPlace
-        '
-        Me.txtBirthPlace.Font = New System.Drawing.Font("Roboto", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtBirthPlace.Location = New System.Drawing.Point(317, 141)
-        Me.txtBirthPlace.Name = "txtBirthPlace"
-        Me.txtBirthPlace.Size = New System.Drawing.Size(162, 26)
-        Me.txtBirthPlace.TabIndex = 24
-        '
         'PersonalInfo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -374,7 +374,7 @@ Partial Class PersonalInfo
     Friend WithEvents Label11 As Label
     Friend WithEvents txtPatientNo As TextBox
     Friend WithEvents Label12 As Label
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txtNamePrefix As TextBox
     Friend WithEvents Label13 As Label
     Friend WithEvents txtBirthPlace As TextBox
 End Class

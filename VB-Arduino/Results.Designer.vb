@@ -43,21 +43,23 @@ Partial Class Results
         Me.Label17 = New System.Windows.Forms.Label()
         Me.FlowLayoutPanel2 = New System.Windows.Forms.FlowLayoutPanel()
         Me.Label18 = New System.Windows.Forms.Label()
-        Me.Label19 = New System.Windows.Forms.Label()
+        Me.txtName = New System.Windows.Forms.Label()
         Me.Label20 = New System.Windows.Forms.Label()
-        Me.Label21 = New System.Windows.Forms.Label()
+        Me.txtBirthplace = New System.Windows.Forms.Label()
         Me.Label22 = New System.Windows.Forms.Label()
-        Me.Label23 = New System.Windows.Forms.Label()
+        Me.txtGender = New System.Windows.Forms.Label()
         Me.Label24 = New System.Windows.Forms.Label()
-        Me.Label25 = New System.Windows.Forms.Label()
+        Me.txtHeight = New System.Windows.Forms.Label()
         Me.Label26 = New System.Windows.Forms.Label()
-        Me.Label27 = New System.Windows.Forms.Label()
+        Me.txtBMI = New System.Windows.Forms.Label()
         Me.Label28 = New System.Windows.Forms.Label()
-        Me.Label29 = New System.Windows.Forms.Label()
+        Me.txtWeight = New System.Windows.Forms.Label()
         Me.Label30 = New System.Windows.Forms.Label()
-        Me.Label31 = New System.Windows.Forms.Label()
+        Me.txtPulseRate = New System.Windows.Forms.Label()
         Me.Label32 = New System.Windows.Forms.Label()
-        Me.Label33 = New System.Windows.Forms.Label()
+        Me.txtTemperature = New System.Windows.Forms.Label()
+        Me.Label19 = New System.Windows.Forms.Label()
+        Me.txtBirthday = New System.Windows.Forms.Label()
         Me.FlowLayoutPanel1.SuspendLayout()
         Me.FlowLayoutPanel2.SuspendLayout()
         Me.SuspendLayout()
@@ -256,21 +258,23 @@ Partial Class Results
         'FlowLayoutPanel2
         '
         Me.FlowLayoutPanel2.Controls.Add(Me.Label18)
+        Me.FlowLayoutPanel2.Controls.Add(Me.txtName)
         Me.FlowLayoutPanel2.Controls.Add(Me.Label19)
+        Me.FlowLayoutPanel2.Controls.Add(Me.txtBirthday)
         Me.FlowLayoutPanel2.Controls.Add(Me.Label20)
-        Me.FlowLayoutPanel2.Controls.Add(Me.Label21)
+        Me.FlowLayoutPanel2.Controls.Add(Me.txtBirthplace)
         Me.FlowLayoutPanel2.Controls.Add(Me.Label22)
-        Me.FlowLayoutPanel2.Controls.Add(Me.Label23)
+        Me.FlowLayoutPanel2.Controls.Add(Me.txtGender)
         Me.FlowLayoutPanel2.Controls.Add(Me.Label24)
-        Me.FlowLayoutPanel2.Controls.Add(Me.Label25)
+        Me.FlowLayoutPanel2.Controls.Add(Me.txtHeight)
         Me.FlowLayoutPanel2.Controls.Add(Me.Label26)
-        Me.FlowLayoutPanel2.Controls.Add(Me.Label27)
+        Me.FlowLayoutPanel2.Controls.Add(Me.txtBMI)
         Me.FlowLayoutPanel2.Controls.Add(Me.Label28)
-        Me.FlowLayoutPanel2.Controls.Add(Me.Label29)
+        Me.FlowLayoutPanel2.Controls.Add(Me.txtWeight)
         Me.FlowLayoutPanel2.Controls.Add(Me.Label30)
-        Me.FlowLayoutPanel2.Controls.Add(Me.Label31)
+        Me.FlowLayoutPanel2.Controls.Add(Me.txtPulseRate)
         Me.FlowLayoutPanel2.Controls.Add(Me.Label32)
-        Me.FlowLayoutPanel2.Controls.Add(Me.Label33)
+        Me.FlowLayoutPanel2.Controls.Add(Me.txtTemperature)
         Me.FlowLayoutPanel2.Location = New System.Drawing.Point(16, 40)
         Me.FlowLayoutPanel2.Name = "FlowLayoutPanel2"
         Me.FlowLayoutPanel2.Size = New System.Drawing.Size(756, 287)
@@ -286,57 +290,57 @@ Partial Class Results
         Me.Label18.TabIndex = 0
         Me.Label18.Text = "Name"
         '
-        'Label19
+        'txtName
         '
-        Me.Label19.AutoSize = True
-        Me.FlowLayoutPanel2.SetFlowBreak(Me.Label19, True)
-        Me.Label19.Font = New System.Drawing.Font("Roboto", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label19.Location = New System.Drawing.Point(76, 0)
-        Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(76, 25)
-        Me.Label19.TabIndex = 1
-        Me.Label19.Text = "Label3"
+        Me.txtName.AutoSize = True
+        Me.FlowLayoutPanel2.SetFlowBreak(Me.txtName, True)
+        Me.txtName.Font = New System.Drawing.Font("Roboto", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtName.Location = New System.Drawing.Point(76, 0)
+        Me.txtName.Name = "txtName"
+        Me.txtName.Size = New System.Drawing.Size(76, 25)
+        Me.txtName.TabIndex = 1
+        Me.txtName.Text = "Label3"
         '
         'Label20
         '
         Me.Label20.AutoSize = True
         Me.Label20.Font = New System.Drawing.Font("Roboto", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label20.Location = New System.Drawing.Point(3, 25)
+        Me.Label20.Location = New System.Drawing.Point(189, 25)
         Me.Label20.Name = "Label20"
-        Me.Label20.Size = New System.Drawing.Size(98, 25)
+        Me.Label20.Size = New System.Drawing.Size(108, 25)
         Me.Label20.TabIndex = 2
-        Me.Label20.Text = "Birthdate"
+        Me.Label20.Text = "Birthplace"
         '
-        'Label21
+        'txtBirthplace
         '
-        Me.Label21.AutoSize = True
-        Me.Label21.Font = New System.Drawing.Font("Roboto", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label21.Location = New System.Drawing.Point(107, 25)
-        Me.Label21.Name = "Label21"
-        Me.Label21.Size = New System.Drawing.Size(76, 25)
-        Me.Label21.TabIndex = 3
-        Me.Label21.Text = "Label5"
+        Me.txtBirthplace.AutoSize = True
+        Me.txtBirthplace.Font = New System.Drawing.Font("Roboto", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtBirthplace.Location = New System.Drawing.Point(303, 25)
+        Me.txtBirthplace.Name = "txtBirthplace"
+        Me.txtBirthplace.Size = New System.Drawing.Size(76, 25)
+        Me.txtBirthplace.TabIndex = 3
+        Me.txtBirthplace.Text = "Label5"
         '
         'Label22
         '
         Me.Label22.AutoSize = True
         Me.Label22.Font = New System.Drawing.Font("Roboto", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label22.Location = New System.Drawing.Point(189, 25)
+        Me.Label22.Location = New System.Drawing.Point(385, 25)
         Me.Label22.Name = "Label22"
         Me.Label22.Size = New System.Drawing.Size(79, 25)
         Me.Label22.TabIndex = 4
         Me.Label22.Text = "Gender"
         '
-        'Label23
+        'txtGender
         '
-        Me.Label23.AutoSize = True
-        Me.FlowLayoutPanel2.SetFlowBreak(Me.Label23, True)
-        Me.Label23.Font = New System.Drawing.Font("Roboto", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label23.Location = New System.Drawing.Point(274, 25)
-        Me.Label23.Name = "Label23"
-        Me.Label23.Size = New System.Drawing.Size(76, 25)
-        Me.Label23.TabIndex = 5
-        Me.Label23.Text = "Label7"
+        Me.txtGender.AutoSize = True
+        Me.FlowLayoutPanel2.SetFlowBreak(Me.txtGender, True)
+        Me.txtGender.Font = New System.Drawing.Font("Roboto", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtGender.Location = New System.Drawing.Point(470, 25)
+        Me.txtGender.Name = "txtGender"
+        Me.txtGender.Size = New System.Drawing.Size(76, 25)
+        Me.txtGender.TabIndex = 5
+        Me.txtGender.Text = "Label7"
         '
         'Label24
         '
@@ -348,15 +352,15 @@ Partial Class Results
         Me.Label24.TabIndex = 6
         Me.Label24.Text = "Height"
         '
-        'Label25
+        'txtHeight
         '
-        Me.Label25.AutoSize = True
-        Me.Label25.Font = New System.Drawing.Font("Roboto", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label25.Location = New System.Drawing.Point(84, 50)
-        Me.Label25.Name = "Label25"
-        Me.Label25.Size = New System.Drawing.Size(76, 25)
-        Me.Label25.TabIndex = 7
-        Me.Label25.Text = "Label9"
+        Me.txtHeight.AutoSize = True
+        Me.txtHeight.Font = New System.Drawing.Font("Roboto", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtHeight.Location = New System.Drawing.Point(84, 50)
+        Me.txtHeight.Name = "txtHeight"
+        Me.txtHeight.Size = New System.Drawing.Size(76, 25)
+        Me.txtHeight.TabIndex = 7
+        Me.txtHeight.Text = "Label9"
         '
         'Label26
         '
@@ -368,16 +372,16 @@ Partial Class Results
         Me.Label26.TabIndex = 8
         Me.Label26.Text = "BMI"
         '
-        'Label27
+        'txtBMI
         '
-        Me.Label27.AutoSize = True
-        Me.FlowLayoutPanel2.SetFlowBreak(Me.Label27, True)
-        Me.Label27.Font = New System.Drawing.Font("Roboto", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label27.Location = New System.Drawing.Point(221, 50)
-        Me.Label27.Name = "Label27"
-        Me.Label27.Size = New System.Drawing.Size(88, 25)
-        Me.Label27.TabIndex = 9
-        Me.Label27.Text = "Label11"
+        Me.txtBMI.AutoSize = True
+        Me.FlowLayoutPanel2.SetFlowBreak(Me.txtBMI, True)
+        Me.txtBMI.Font = New System.Drawing.Font("Roboto", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtBMI.Location = New System.Drawing.Point(221, 50)
+        Me.txtBMI.Name = "txtBMI"
+        Me.txtBMI.Size = New System.Drawing.Size(88, 25)
+        Me.txtBMI.TabIndex = 9
+        Me.txtBMI.Text = "Label11"
         '
         'Label28
         '
@@ -389,16 +393,16 @@ Partial Class Results
         Me.Label28.TabIndex = 10
         Me.Label28.Text = "Weight"
         '
-        'Label29
+        'txtWeight
         '
-        Me.Label29.AutoSize = True
-        Me.FlowLayoutPanel2.SetFlowBreak(Me.Label29, True)
-        Me.Label29.Font = New System.Drawing.Font("Roboto", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label29.Location = New System.Drawing.Point(87, 75)
-        Me.Label29.Name = "Label29"
-        Me.Label29.Size = New System.Drawing.Size(88, 25)
-        Me.Label29.TabIndex = 11
-        Me.Label29.Text = "Label13"
+        Me.txtWeight.AutoSize = True
+        Me.FlowLayoutPanel2.SetFlowBreak(Me.txtWeight, True)
+        Me.txtWeight.Font = New System.Drawing.Font("Roboto", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtWeight.Location = New System.Drawing.Point(87, 75)
+        Me.txtWeight.Name = "txtWeight"
+        Me.txtWeight.Size = New System.Drawing.Size(88, 25)
+        Me.txtWeight.TabIndex = 11
+        Me.txtWeight.Text = "Label13"
         '
         'Label30
         '
@@ -410,16 +414,16 @@ Partial Class Results
         Me.Label30.TabIndex = 12
         Me.Label30.Text = "Pulse Rate"
         '
-        'Label31
+        'txtPulseRate
         '
-        Me.Label31.AutoSize = True
-        Me.FlowLayoutPanel2.SetFlowBreak(Me.Label31, True)
-        Me.Label31.Font = New System.Drawing.Font("Roboto", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label31.Location = New System.Drawing.Point(121, 100)
-        Me.Label31.Name = "Label31"
-        Me.Label31.Size = New System.Drawing.Size(88, 25)
-        Me.Label31.TabIndex = 13
-        Me.Label31.Text = "Label15"
+        Me.txtPulseRate.AutoSize = True
+        Me.FlowLayoutPanel2.SetFlowBreak(Me.txtPulseRate, True)
+        Me.txtPulseRate.Font = New System.Drawing.Font("Roboto", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtPulseRate.Location = New System.Drawing.Point(121, 100)
+        Me.txtPulseRate.Name = "txtPulseRate"
+        Me.txtPulseRate.Size = New System.Drawing.Size(88, 25)
+        Me.txtPulseRate.TabIndex = 13
+        Me.txtPulseRate.Text = "Label15"
         '
         'Label32
         '
@@ -431,16 +435,36 @@ Partial Class Results
         Me.Label32.TabIndex = 14
         Me.Label32.Text = "Temperature"
         '
-        'Label33
+        'txtTemperature
         '
-        Me.Label33.AutoSize = True
-        Me.FlowLayoutPanel2.SetFlowBreak(Me.Label33, True)
-        Me.Label33.Font = New System.Drawing.Font("Roboto", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label33.Location = New System.Drawing.Point(140, 125)
-        Me.Label33.Name = "Label33"
-        Me.Label33.Size = New System.Drawing.Size(88, 25)
-        Me.Label33.TabIndex = 15
-        Me.Label33.Text = "Label17"
+        Me.txtTemperature.AutoSize = True
+        Me.FlowLayoutPanel2.SetFlowBreak(Me.txtTemperature, True)
+        Me.txtTemperature.Font = New System.Drawing.Font("Roboto", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtTemperature.Location = New System.Drawing.Point(140, 125)
+        Me.txtTemperature.Name = "txtTemperature"
+        Me.txtTemperature.Size = New System.Drawing.Size(88, 25)
+        Me.txtTemperature.TabIndex = 15
+        Me.txtTemperature.Text = "Label17"
+        '
+        'Label19
+        '
+        Me.Label19.AutoSize = True
+        Me.Label19.Font = New System.Drawing.Font("Roboto", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label19.Location = New System.Drawing.Point(3, 25)
+        Me.Label19.Name = "Label19"
+        Me.Label19.Size = New System.Drawing.Size(98, 25)
+        Me.Label19.TabIndex = 16
+        Me.Label19.Text = "Birthdate"
+        '
+        'txtBirthday
+        '
+        Me.txtBirthday.AutoSize = True
+        Me.txtBirthday.Font = New System.Drawing.Font("Roboto", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtBirthday.Location = New System.Drawing.Point(107, 25)
+        Me.txtBirthday.Name = "txtBirthday"
+        Me.txtBirthday.Size = New System.Drawing.Size(76, 25)
+        Me.txtBirthday.TabIndex = 17
+        Me.txtBirthday.Text = "Label5"
         '
         'Results
         '
@@ -483,19 +507,21 @@ Partial Class Results
     Friend WithEvents Label17 As Label
     Friend WithEvents FlowLayoutPanel2 As FlowLayoutPanel
     Friend WithEvents Label18 As Label
-    Friend WithEvents Label19 As Label
+    Friend WithEvents txtName As Label
     Friend WithEvents Label20 As Label
-    Friend WithEvents Label21 As Label
+    Friend WithEvents txtBirthplace As Label
     Friend WithEvents Label22 As Label
-    Friend WithEvents Label23 As Label
+    Friend WithEvents txtGender As Label
     Friend WithEvents Label24 As Label
-    Friend WithEvents Label25 As Label
+    Friend WithEvents txtHeight As Label
     Friend WithEvents Label26 As Label
-    Friend WithEvents Label27 As Label
+    Friend WithEvents txtBMI As Label
     Friend WithEvents Label28 As Label
-    Friend WithEvents Label29 As Label
+    Friend WithEvents txtWeight As Label
     Friend WithEvents Label30 As Label
-    Friend WithEvents Label31 As Label
+    Friend WithEvents txtPulseRate As Label
     Friend WithEvents Label32 As Label
-    Friend WithEvents Label33 As Label
+    Friend WithEvents txtTemperature As Label
+    Friend WithEvents Label19 As Label
+    Friend WithEvents txtBirthday As Label
 End Class
