@@ -2,7 +2,7 @@
 
     Public Shared activeForm As Form
 
-    Private Sub FlowLayoutPanel1_Click(sender As Object, e As EventArgs) Handles FlowLayoutPanel1.Click
+    Private Sub FlowLayoutPanel1_Click(sender As Object, e As EventArgs)
         Me.Hide()
         PatientNoCheck.Show()
     End Sub

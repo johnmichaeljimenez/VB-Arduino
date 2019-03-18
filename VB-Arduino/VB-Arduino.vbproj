@@ -106,6 +106,36 @@
     <Compile Include="PersonalInfo.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Results.Designer.vb">
+      <DependentUpon>Results.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Results.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ScanHeight.Designer.vb">
+      <DependentUpon>ScanHeight.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ScanHeight.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ScanPulse.Designer.vb">
+      <DependentUpon>ScanPulse.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ScanPulse.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ScanTemp.Designer.vb">
+      <DependentUpon>ScanTemp.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ScanTemp.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ScanWeight.Designer.vb">
+      <DependentUpon>ScanWeight.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ScanWeight.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Utils.vb" />
   </ItemGroup>
   <ItemGroup>
@@ -123,6 +153,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PersonalInfo.resx">
       <DependentUpon>PersonalInfo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Results.resx">
+      <DependentUpon>Results.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ScanHeight.resx">
+      <DependentUpon>ScanHeight.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ScanPulse.resx">
+      <DependentUpon>ScanPulse.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ScanTemp.resx">
+      <DependentUpon>ScanTemp.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ScanWeight.resx">
+      <DependentUpon>ScanWeight.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
