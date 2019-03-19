@@ -109,7 +109,7 @@ void loop()
       total = total + readings[readIndex];
       readIndex = readIndex + 1;
       int x = 0;
-      x = readIndex % 5;
+//      x = readIndex % 5;
       if (x == 0)
       {
         Serial.print(" BPM: ");
@@ -124,10 +124,10 @@ void loop()
         Serial.print(OxygenSat);
         Serial.print("% & Average BPM = ");
         Serial.println(average);
+        ch = 0;
       }
 //      Serial.println("Pulse finished");
       delay(1);
-      ch = 0;
     }
     else if (ch == 4) //Temperature
     {
@@ -147,7 +147,7 @@ void loop()
     if (Serial.available())
     {
       ch = Serial.read()-48;//.toInt();
-//      Serial.println(ch);
+      Serial.println("new");
     }
   }
 }
