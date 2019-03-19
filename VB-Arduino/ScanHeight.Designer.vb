@@ -22,6 +22,7 @@ Partial Class ScanHeight
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txtFeet = New System.Windows.Forms.TextBox()
         Me.txtInch = New System.Windows.Forms.TextBox()
@@ -32,6 +33,7 @@ Partial Class ScanHeight
         Me.Label5 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.btnNext = New System.Windows.Forms.Button()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -48,21 +50,24 @@ Partial Class ScanHeight
         '
         Me.txtFeet.Location = New System.Drawing.Point(24, 60)
         Me.txtFeet.Name = "txtFeet"
-        Me.txtFeet.Size = New System.Drawing.Size(36, 20)
+        Me.txtFeet.ReadOnly = True
+        Me.txtFeet.Size = New System.Drawing.Size(63, 20)
         Me.txtFeet.TabIndex = 1
         '
         'txtInch
         '
         Me.txtInch.Location = New System.Drawing.Point(93, 60)
         Me.txtInch.Name = "txtInch"
-        Me.txtInch.Size = New System.Drawing.Size(36, 20)
+        Me.txtInch.ReadOnly = True
+        Me.txtInch.Size = New System.Drawing.Size(78, 20)
         Me.txtInch.TabIndex = 2
         '
         'txtMeters
         '
-        Me.txtMeters.Location = New System.Drawing.Point(177, 60)
+        Me.txtMeters.Location = New System.Drawing.Point(339, 60)
         Me.txtMeters.Name = "txtMeters"
-        Me.txtMeters.Size = New System.Drawing.Size(36, 20)
+        Me.txtMeters.ReadOnly = True
+        Me.txtMeters.Size = New System.Drawing.Size(79, 20)
         Me.txtMeters.TabIndex = 3
         '
         'Label2
@@ -86,11 +91,11 @@ Partial Class ScanHeight
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(174, 83)
+        Me.Label4.Location = New System.Drawing.Point(336, 83)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(39, 13)
+        Me.Label4.Size = New System.Drawing.Size(62, 13)
         Me.Label4.TabIndex = 6
-        Me.Label4.Text = "Meters"
+        Me.Label4.Text = "Centimeters"
         '
         'Label5
         '
@@ -117,6 +122,9 @@ Partial Class ScanHeight
         Me.btnNext.TabIndex = 9
         Me.btnNext.Text = "Next"
         Me.btnNext.UseVisualStyleBackColor = True
+        '
+        'Timer1
+        '
         '
         'ScanHeight
         '
@@ -151,4 +159,5 @@ Partial Class ScanHeight
     Friend WithEvents Label5 As Label
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents btnNext As Button
+    Friend WithEvents Timer1 As Timer
 End Class

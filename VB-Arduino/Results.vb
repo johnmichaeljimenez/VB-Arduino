@@ -5,6 +5,7 @@ Public Class Results
         txtBirthplace.Text = PersonalInfo.birthplace
         txtGender.Text = PersonalInfo.gender
         txtName.Text = PersonalInfo.firstName + " " + PersonalInfo.middleName + " " + PersonalInfo.surname + " " + PersonalInfo.namePrefix
+        txtHeight.Text = ScanHeight.result.ToString() + " cm"
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click

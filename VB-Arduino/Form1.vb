@@ -10,6 +10,9 @@
 
         SerialPort1.Open()
         readSerial = ""
+
+        'testprint()
+
     End Sub
 
     Private Sub Form1_Click(sender As Object, e As EventArgs) Handles MyBase.Click
@@ -56,4 +59,39 @@
             scanMode = 0
         End If
     End Sub
+
+    Public Sub testprint()
+        Dim templatePath As String = Application.StartupPath + "/test2.xlsx"
+        Dim savePath As String = Application.StartupPath + "/test2.xlsx"
+
+        Dim excelApp As New Microsoft.Office.Interop.Excel.Application()
+
+        Dim currentWorkbook As Microsoft.Office.Interop.Excel.Workbook = excelApp.Workbooks.Add(templatePath)
+        Dim currentWorksheet As Microsoft.Office.Interop.Excel.Worksheet = currentWorkbook.ActiveSheet ' (Microsoft.Office.Interop.Excel.Worksheet)
+        excelApp.Visible = False
+
+        Dim empty As Boolean = True
+
+        Dim row As Integer = 1
+        While True
+            Dim value As String = currentWorksheet.Range("A" + (row.ToString())).Value
+            Debug.Print("row: A" + row.ToString() + "  value: " + value)
+            empty = String.IsNullOrEmpty(value)
+            If empty Then
+                Debug.Print(">" + value)
+                Exit While
+            End If
+            row += 1
+        End While
+
+        currentWorksheet.Range("A" + row.ToString()).Value = DateTime.Now.ToString()
+
+        excelApp.DisplayAlerts = False
+
+        currentWorksheet.SaveAs(savePath)
+        currentWorkbook.Close()
+        excelApp.Quit()
+    End Sub
+
+
 End Class

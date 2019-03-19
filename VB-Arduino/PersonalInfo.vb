@@ -26,7 +26,7 @@ Public Class PersonalInfo
         city = txtCity.Text
         contactNo = txtContact.Text
 
-        Results.Show()
+        ScanHeight.Show()
         Close()
 
     End Sub

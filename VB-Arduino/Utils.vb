@@ -12,6 +12,10 @@ Module Utils
         Dim templatePath As String = Application.StartupPath + "/template.xlsx"
         Dim savePath As String = progDir + f + ".xlsx"
 
+        If (PatientNoCheck.existing) Then
+            templatePath = savePath
+        End If
+
         Dim excelApp As New Microsoft.Office.Interop.Excel.Application()
 
         Dim currentWorkbook As Microsoft.Office.Interop.Excel.Workbook = excelApp.Workbooks.Add(templatePath)
@@ -26,6 +30,34 @@ Module Utils
         currentWorksheet.Range(Cells.Birthplace).Value = PersonalInfo.birthplace
         currentWorksheet.Range(Cells.Address).Value = PersonalInfo.address
         currentWorksheet.Range(Cells.ContactNo).Value = PersonalInfo.contactNo
+
+        Dim empty As Boolean = False
+
+        'Dim row As Integer = 15
+        'While empty
+        '    row += 1
+        '    Dim value As String = currentWorksheet.Range(Cells.DateExamined + row.ToString()).Value
+        '    Debug.Print("row: " + Cells.DateExamined + row.ToString() + "  value: " + value)
+        '    empty = String.IsNullOrEmpty(value)
+        'End While
+
+
+        Dim row As Integer = 1
+        While True
+            Dim value As String = currentWorksheet.Range("A" + (row.ToString())).Value
+            Debug.Print("row: A" + row.ToString() + "  value: " + value)
+            Empty = String.IsNullOrEmpty(value)
+            If Empty Then
+                Debug.Print(">" + value)
+                Exit While
+            End If
+            row += 1
+        End While
+
+
+        Dim dt As DateTime = DateTime.Now
+        currentWorksheet.Range(Cells.DateExamined + row.ToString()).Value = dt.ToShortDateString() + " " + dt.ToShortTimeString()
+        currentWorksheet.Range(Cells.Height + row.ToString()).Value = ScanHeight.result
 
         excelApp.DisplayAlerts = False
 
@@ -68,10 +100,10 @@ Public Class Cells
     Public Const Birthplace = "B9"
     Public Const Address = "B10"
     Public Const ContactNo = "B11"
-    Public Const DateExamined = "A15"
-    Public Const Height = "B15"
-    Public Const Weight = "C15"
-    Public Const PulseRate = "D15"
-    Public Const Temperature = "E15"
-    Public Const BMI = "F15"
+    Public Const DateExamined = "A"
+    Public Const Height = "B"
+    Public Const Weight = "C"
+    Public Const PulseRate = "D"
+    Public Const Temperature = "E"
+    Public Const BMI = "F"
 End Class

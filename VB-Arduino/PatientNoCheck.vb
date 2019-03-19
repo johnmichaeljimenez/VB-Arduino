@@ -1,7 +1,10 @@
 ﻿Public Class PatientNoCheck
+    Public Shared existing As Boolean
+
     Private Sub PatientNoCheck_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         grp1.Visible = True
         grp2.Visible = False
+        existing = False
     End Sub
 
     Private Sub btnNext_Click(sender As Object, e As EventArgs) Handles btnNext.Click
@@ -9,6 +12,7 @@
             grp1.Visible = False
             grp2.Visible = True
         Else
+            existing = False
             PersonalInfo.patientNo = ""
             PersonalInfo.Show()
             Close()
@@ -32,7 +36,8 @@
             PersonalInfo.patientNo = pn
             MessageBox.Show("You can now proceed to sensor readings.")
             'PersonalInfo.Show()
-            'Utils.ReadData(pn)
+            existing = True
+            Utils.ReadData(pn)
             ScanHeight.Show()
             Close()
             Exit Sub
@@ -40,6 +45,7 @@
 
         If (MessageBox.Show("Data with Patient No. " + pn + " not found. Do you want to create a new record?", "", MessageBoxButtons.YesNo) = DialogResult.Yes) Then
             PersonalInfo.patientNo = ""
+            existing = False
             PersonalInfo.Show()
             Close()
         End If
