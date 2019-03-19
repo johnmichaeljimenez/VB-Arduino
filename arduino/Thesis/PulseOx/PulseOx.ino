@@ -1,5 +1,5 @@
 //PulseOx
-const int numReadings = 25;
+const int numReadings = 5;
 int readings[numReadings];      // the readings from the analog input
 int readIndex = 0;              // the index of the current reading
 int total = 0;                  // the running total
