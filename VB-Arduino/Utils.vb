@@ -16,7 +16,7 @@ Module Utils
 
         Dim currentWorkbook As Microsoft.Office.Interop.Excel.Workbook = excelApp.Workbooks.Add(templatePath)
         Dim currentWorksheet As Microsoft.Office.Interop.Excel.Worksheet = currentWorkbook.ActiveSheet ' (Microsoft.Office.Interop.Excel.Worksheet)
-        excelApp.Visible = True
+        excelApp.Visible = False
 
 
         currentWorksheet.Range(Cells.PatientNo).Value = PersonalInfo.patientNo

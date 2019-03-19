@@ -23,15 +23,15 @@ Partial Class ScanHeight
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.txtFeet = New System.Windows.Forms.TextBox()
+        Me.txtInch = New System.Windows.Forms.TextBox()
+        Me.txtMeters = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnNext = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -44,26 +44,26 @@ Partial Class ScanHeight
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Height Measurement"
         '
-        'TextBox1
+        'txtFeet
         '
-        Me.TextBox1.Location = New System.Drawing.Point(24, 60)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(36, 20)
-        Me.TextBox1.TabIndex = 1
+        Me.txtFeet.Location = New System.Drawing.Point(24, 60)
+        Me.txtFeet.Name = "txtFeet"
+        Me.txtFeet.Size = New System.Drawing.Size(36, 20)
+        Me.txtFeet.TabIndex = 1
         '
-        'TextBox2
+        'txtInch
         '
-        Me.TextBox2.Location = New System.Drawing.Point(93, 60)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(36, 20)
-        Me.TextBox2.TabIndex = 2
+        Me.txtInch.Location = New System.Drawing.Point(93, 60)
+        Me.txtInch.Name = "txtInch"
+        Me.txtInch.Size = New System.Drawing.Size(36, 20)
+        Me.txtInch.TabIndex = 2
         '
-        'TextBox3
+        'txtMeters
         '
-        Me.TextBox3.Location = New System.Drawing.Point(177, 60)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(36, 20)
-        Me.TextBox3.TabIndex = 3
+        Me.txtMeters.Location = New System.Drawing.Point(177, 60)
+        Me.txtMeters.Name = "txtMeters"
+        Me.txtMeters.Size = New System.Drawing.Size(36, 20)
+        Me.txtMeters.TabIndex = 3
         '
         'Label2
         '
@@ -109,29 +109,29 @@ Partial Class ScanHeight
         Me.PictureBox1.TabIndex = 8
         Me.PictureBox1.TabStop = False
         '
-        'Button1
+        'btnNext
         '
-        Me.Button1.Location = New System.Drawing.Point(628, 351)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(127, 45)
-        Me.Button1.TabIndex = 9
-        Me.Button1.Text = "Next"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnNext.Location = New System.Drawing.Point(628, 351)
+        Me.btnNext.Name = "btnNext"
+        Me.btnNext.Size = New System.Drawing.Size(127, 45)
+        Me.btnNext.TabIndex = 9
+        Me.btnNext.Text = "Next"
+        Me.btnNext.UseVisualStyleBackColor = True
         '
         'ScanHeight
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(784, 442)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.btnNext)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.TextBox3)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.txtMeters)
+        Me.Controls.Add(Me.txtInch)
+        Me.Controls.Add(Me.txtFeet)
         Me.Controls.Add(Me.Label1)
         Me.Name = "ScanHeight"
         Me.Text = "ScanHeight"
@@ -142,13 +142,13 @@ Partial Class ScanHeight
     End Sub
 
     Friend WithEvents Label1 As Label
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents txtFeet As TextBox
+    Friend WithEvents txtInch As TextBox
+    Friend WithEvents txtMeters As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents Button1 As Button
+    Friend WithEvents btnNext As Button
 End Class

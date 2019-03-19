@@ -32,8 +32,8 @@
             PersonalInfo.patientNo = pn
             MessageBox.Show("You can now proceed to sensor readings.")
             'PersonalInfo.Show()
-            Utils.ReadData(pn)
-            Results.Show()
+            'Utils.ReadData(pn)
+            ScanHeight.Show()
             Close()
             Exit Sub
         End If

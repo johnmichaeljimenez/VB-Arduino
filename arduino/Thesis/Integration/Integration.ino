@@ -70,8 +70,9 @@ void loop()
       // Prints the distance on the Serial Monitor
 //      while (distance == 0)
 //      {
-        Serial.print("Distance: ");
-        Serial.println(1879.6 - distance);
+        Serial.print("$");
+        Serial.print(1879.6 - distance);
+        Serial.println("#");
         delay(1000);
 //      }
         ch = 0;
@@ -147,7 +148,7 @@ void loop()
     if (Serial.available())
     {
       ch = Serial.read()-48;//.toInt();
-      Serial.println("new");
+//      Serial.println("new");
     }
   }
 }
