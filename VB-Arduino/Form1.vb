@@ -9,20 +9,17 @@
         readSerial = ""
 
 
-        PersonalInfo.patientNo = "00000006"
-        PersonalInfo.firstName = "asd"
-        PersonalInfo.gender = "Male"
-        PersonalInfo.birthday = "1/1/1"
-        PersonalInfo.birthplace = "asd"
-        PersonalInfo.address = "address"
-        PersonalInfo.contactNo = "0909"
-        PatientNoCheck.existing = True
-        PrintExcel(PersonalInfo.patientNo)
-
-        Application.Exit()
-
-
-        Exit Sub
+        'PersonalInfo.patientNo = "00000006"
+        'PersonalInfo.firstName = "asd"
+        'PersonalInfo.gender = "Male"
+        'PersonalInfo.birthday = "1/1/1"
+        'PersonalInfo.birthplace = "asd"
+        'PersonalInfo.address = "address"
+        'PersonalInfo.contactNo = "0909"
+        'PatientNoCheck.existing = True
+        'PrintExcel(PersonalInfo.patientNo)
+        'Application.Exit()
+        'Exit Sub
 
 
 
