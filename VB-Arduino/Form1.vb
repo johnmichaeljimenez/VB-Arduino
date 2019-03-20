@@ -6,10 +6,29 @@
     Public Shared scanMode As Integer
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        readSerial = ""
+
+
+        PersonalInfo.patientNo = "00000006"
+        PersonalInfo.firstName = "asd"
+        PersonalInfo.gender = "Male"
+        PersonalInfo.birthday = "1/1/1"
+        PersonalInfo.birthplace = "asd"
+        PersonalInfo.address = "address"
+        PersonalInfo.contactNo = "0909"
+        PatientNoCheck.existing = True
+        PrintExcel(PersonalInfo.patientNo)
+
+        Application.Exit()
+
+
+        Exit Sub
+
+
+
         activeForm = Me
 
         SerialPort1.Open()
-        readSerial = ""
 
         'testprint()
 

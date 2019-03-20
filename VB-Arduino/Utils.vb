@@ -42,7 +42,7 @@ Module Utils
         'End While
 
 
-        Dim row As Integer = 1
+        Dim row As Integer = 15
         While True
             Dim value As String = currentWorksheet.Range("A" + (row.ToString())).Value
             Debug.Print("row: A" + row.ToString() + "  value: " + value)
@@ -54,6 +54,7 @@ Module Utils
             row += 1
         End While
 
+        Debug.Print("writing to " + row.ToString())
 
         Dim dt As DateTime = DateTime.Now
         currentWorksheet.Range(Cells.DateExamined + row.ToString()).Value = dt.ToShortDateString() + " " + dt.ToShortTimeString()
