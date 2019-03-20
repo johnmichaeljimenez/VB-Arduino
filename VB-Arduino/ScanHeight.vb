@@ -20,13 +20,14 @@
         Dim centimeters As Decimal
 
         centimeters = h / 10
-        meters = h / 1000
-        feet2 = (3.280839895 * meters)
-        feet = CInt(feet2)
-        inch = (feet2 - feet) * 12
+        'meters = h / 1000
+        'feet2 = (3.280839895 * meters)
+        'feet = CInt(feet2)
+        'inch = (feet2 - feet) * 12
+        Dim inches As Integer = CInt(Math.Round(centimeters / 2.54))
 
-        txtFeet.Text = feet.ToString()
-        txtInch.Text = inch.ToString("F2")
+        txtFeet.Text = inches \ 12 'feet.ToString()
+        txtInch.Text = inches Mod 12 'inch.ToString("F2")
         txtMeters.Text = centimeters.ToString()
 
         result = centimeters

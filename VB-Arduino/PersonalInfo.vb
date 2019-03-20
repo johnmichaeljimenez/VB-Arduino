@@ -9,7 +9,7 @@ Public Class PersonalInfo
     Public Shared address, city, contactNo As String
 
     Private Sub btnNext_Click(sender As Object, e As EventArgs) Handles btnNext.Click
-        If txtPatientNo.Text = "" Or txtLastName.Text = "" Or txtMiddleName.Text = "" Or txtFirstName.Text = "" Or txtBirthPlace.Text = "" Or txtAddress.Text = "" Or txtCity.Text = "" Then
+        If txtPatientNo.Text = "" Or txtLastName.Text = "" Or txtFirstName.Text = "" Or txtBirthPlace.Text = "" Or txtAddress.Text = "" Or txtCity.Text = "" Then
             MsgBox("Please fill up all required fields (*)")
             Exit Sub
         End If
