@@ -113,18 +113,21 @@ void loop()
 //      x = readIndex % 5;
       if (x == 0)
       {
-        Serial.print(" BPM: ");
-        Serial.print(HeartRate);
+//        Serial.print(" BPM: ");
+//        Serial.print(HeartRate);
       }
       if (readIndex >= numReadings)
       {
         readIndex = 0;
         average = total / numReadings;
         int OxygenSat = map(average, 67, 100, 97, 80);
-        Serial.print(" Oxygen Saturation: ");
+//        Serial.print(" Oxygen Saturation: ");
+        Serial.print("$");
         Serial.print(OxygenSat);
-        Serial.print("% & Average BPM = ");
-        Serial.println(average);
+        Serial.print(",");
+//        Serial.print("% & Average BPM = ");
+        Serial.print(average);
+        Serial.println("#");
         ch = 0;
       }
 //      Serial.println("Pulse finished");

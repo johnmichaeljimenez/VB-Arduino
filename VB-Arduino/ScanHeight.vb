@@ -32,16 +32,20 @@
 
         result = centimeters
         If n > 0 Then
+            Form1.SetMode(0)
             btnNext.Enabled = True
         End If
     End Sub
 
     Private Sub btnNext_Click(sender As Object, e As EventArgs) Handles btnNext.Click
-        Results.Show()
+        ScanPulse.Show()
         Close()
     End Sub
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
-        Form1.SetMode(1)
+        If (result <= 0) Then
+            Form1.SetMode(1)
+        End If
+
     End Sub
 End Class

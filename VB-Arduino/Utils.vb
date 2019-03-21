@@ -58,7 +58,8 @@ Module Utils
 
         Dim dt As DateTime = DateTime.Now
         currentWorksheet.Range(Cells.DateExamined + row.ToString()).Value = dt.ToShortDateString() + " " + dt.ToShortTimeString()
-        currentWorksheet.Range(Cells.Height + row.ToString()).Value = ScanHeight.result
+        currentWorksheet.Range(Cells.Height + row.ToString()).Value = ScanHeight.result.ToString() + " cm"
+        currentWorksheet.Range(Cells.PulseRate + row.ToString()).Value = ScanPulse.resultBPM.ToString() + " : " + ScanPulse.resultSat.ToString() + "%"
 
         excelApp.DisplayAlerts = False
 

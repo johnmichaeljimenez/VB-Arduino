@@ -6,6 +6,7 @@ Public Class Results
         txtGender.Text = PersonalInfo.gender
         txtName.Text = PersonalInfo.firstName + " " + PersonalInfo.middleName + " " + PersonalInfo.surname + " " + PersonalInfo.namePrefix
         txtHeight.Text = ScanHeight.result.ToString() + " cm"
+        txtPulseRate.Text = ScanPulse.resultBPM + "(" + ScanPulse.resultSat + "%)"
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
