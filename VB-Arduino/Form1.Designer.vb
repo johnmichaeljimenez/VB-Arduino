@@ -32,30 +32,35 @@ Partial Class Form1
         '
         'Label1
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Roboto", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(147, 144)
+        Me.Label1.BackColor = System.Drawing.Color.FromArgb(CType(CType(27, Byte), Integer), CType(CType(94, Byte), Integer), CType(CType(32, Byte), Integer))
+        Me.Label1.Font = New System.Drawing.Font("Roboto", 25.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.White
+        Me.Label1.Location = New System.Drawing.Point(-6, 119)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(506, 33)
+        Me.Label1.Size = New System.Drawing.Size(795, 48)
         Me.Label1.TabIndex = 3
-        Me.Label1.Text = "Interactive Healthcare Monitoring Device"
+        Me.Label1.Text = "Integrated Healthcare Monitoring Device"
+        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Roboto", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(96, 187)
+        Me.Label2.ForeColor = System.Drawing.Color.White
+        Me.Label2.Location = New System.Drawing.Point(74, 201)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(633, 46)
         Me.Label2.TabIndex = 4
         Me.Label2.Text = "Please remove all hats, caps, and headgear as well as all slippers, shoes," & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "sanda" &
     "ls, and footwear before using this device."
+        Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Roboto", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(177, 276)
+        Me.Label3.Font = New System.Drawing.Font("Roboto", 20.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.White
+        Me.Label3.Location = New System.Drawing.Point(173, 276)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(406, 33)
         Me.Label3.TabIndex = 5
@@ -73,6 +78,7 @@ Partial Class Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(784, 442)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Label2)

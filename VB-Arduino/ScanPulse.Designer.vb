@@ -37,16 +37,21 @@ Partial Class ScanPulse
         '
         'btnNext
         '
-        Me.btnNext.Location = New System.Drawing.Point(640, 365)
+        Me.btnNext.AutoSize = True
+        Me.btnNext.BackColor = System.Drawing.Color.FromArgb(CType(CType(76, Byte), Integer), CType(CType(140, Byte), Integer), CType(CType(74, Byte), Integer))
+        Me.btnNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnNext.Font = New System.Drawing.Font("Roboto", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnNext.ForeColor = System.Drawing.Color.White
+        Me.btnNext.Location = New System.Drawing.Point(628, 362)
         Me.btnNext.Name = "btnNext"
-        Me.btnNext.Size = New System.Drawing.Size(127, 45)
-        Me.btnNext.TabIndex = 27
+        Me.btnNext.Size = New System.Drawing.Size(75, 39)
+        Me.btnNext.TabIndex = 17
         Me.btnNext.Text = "Next"
-        Me.btnNext.UseVisualStyleBackColor = True
+        Me.btnNext.UseVisualStyleBackColor = False
         '
         'PictureBox1
         '
-        Me.PictureBox1.Location = New System.Drawing.Point(475, 60)
+        Me.PictureBox1.Location = New System.Drawing.Point(496, 74)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(292, 275)
         Me.PictureBox1.TabIndex = 26
@@ -55,51 +60,65 @@ Partial Class ScanPulse
         'Label5
         '
         Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Roboto", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.ForeColor = System.Drawing.Color.White
         Me.Label5.Location = New System.Drawing.Point(33, 183)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(423, 26)
+        Me.Label5.Size = New System.Drawing.Size(429, 72)
         Me.Label5.TabIndex = 25
-        Me.Label5.Text = "Please put your index finger gently on the sensor pressing softly during the meas" &
-    "urement." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "It is recommended to breathe calmly and relax."
+        Me.Label5.Text = "Please put your index finger gently on the" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "sensor pressing softly during the mea" &
+    "surement." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "It is recommended to breathe calmly and relax."
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(33, 97)
+        Me.Label2.Font = New System.Drawing.Font("Roboto", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.White
+        Me.Label2.Location = New System.Drawing.Point(60, 134)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(30, 13)
+        Me.Label2.Size = New System.Drawing.Size(51, 23)
         Me.Label2.TabIndex = 23
         Me.Label2.Text = "BPM"
         '
         'txtBPM
         '
-        Me.txtBPM.Location = New System.Drawing.Point(36, 74)
+        Me.txtBPM.Font = New System.Drawing.Font("Roboto", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtBPM.Location = New System.Drawing.Point(64, 97)
         Me.txtBPM.Name = "txtBPM"
-        Me.txtBPM.Size = New System.Drawing.Size(36, 20)
+        Me.txtBPM.ReadOnly = True
+        Me.txtBPM.Size = New System.Drawing.Size(47, 30)
         Me.txtBPM.TabIndex = 21
         '
         'Label1
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(33, 40)
+        Me.Label1.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Label1.Font = New System.Drawing.Font("Roboto", 16.0!, System.Drawing.FontStyle.Bold)
+        Me.Label1.ForeColor = System.Drawing.Color.White
+        Me.Label1.Location = New System.Drawing.Point(0, 24)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(3, 0, 3, 12)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(126, 13)
+        Me.Label1.Size = New System.Drawing.Size(801, 37)
         Me.Label1.TabIndex = 20
         Me.Label1.Text = "Pulse Rate Measurement"
+        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'txtSat
         '
-        Me.txtSat.Location = New System.Drawing.Point(138, 74)
+        Me.txtSat.Font = New System.Drawing.Font("Roboto", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtSat.Location = New System.Drawing.Point(169, 97)
         Me.txtSat.Name = "txtSat"
-        Me.txtSat.Size = New System.Drawing.Size(36, 20)
+        Me.txtSat.ReadOnly = True
+        Me.txtSat.Size = New System.Drawing.Size(53, 30)
         Me.txtSat.TabIndex = 28
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(135, 97)
+        Me.Label3.Font = New System.Drawing.Font("Roboto", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.White
+        Me.Label3.Location = New System.Drawing.Point(165, 134)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(34, 13)
+        Me.Label3.Size = New System.Drawing.Size(57, 23)
         Me.Label3.TabIndex = 29
         Me.Label3.Text = "SpO2"
         '
@@ -110,7 +129,8 @@ Partial Class ScanPulse
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(784, 442)
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(27, Byte), Integer), CType(CType(94, Byte), Integer), CType(CType(32, Byte), Integer))
+        Me.ClientSize = New System.Drawing.Size(800, 480)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.txtSat)
         Me.Controls.Add(Me.btnNext)
@@ -121,6 +141,7 @@ Partial Class ScanPulse
         Me.Controls.Add(Me.Label1)
         Me.Name = "ScanPulse"
         Me.Text = "ScanPulse"
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
