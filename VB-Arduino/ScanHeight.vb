@@ -39,7 +39,7 @@
     End Sub
 
     Private Sub btnNext_Click(sender As Object, e As EventArgs) Handles btnNext.Click
-        ScanTemp.Show()
+        ScanPulse.Show()
         Close()
     End Sub
 

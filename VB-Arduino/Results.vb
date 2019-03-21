@@ -6,7 +6,7 @@ Public Class Results
         txtGender.Text = PersonalInfo.gender
         txtName.Text = PersonalInfo.firstName + " " + PersonalInfo.middleName + " " + PersonalInfo.surname + " " + PersonalInfo.namePrefix
         txtHeight.Text = ScanHeight.result.ToString() + " cm"
-        txtPulseRate.Text = ScanPulse.resultBPM.ToString() + "(" + ScanPulse.resultSat.ToString() + "%)"
+        txtPulseRate.Text = ScanPulse.resultSat.ToString() + "(" + ScanPulse.resultBPM.ToString() + "%)"
         txtTemperature.Text = ScanTemp.result.ToString() + " °"
     End Sub
 

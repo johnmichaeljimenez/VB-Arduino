@@ -59,8 +59,8 @@ Module Utils
         Dim dt As DateTime = DateTime.Now
         currentWorksheet.Range(Cells.DateExamined + row.ToString()).Value = dt.ToShortDateString() + " " + dt.ToShortTimeString()
         currentWorksheet.Range(Cells.Height + row.ToString()).Value = ScanHeight.result.ToString() + " cm"
-        currentWorksheet.Range(Cells.PulseRate + row.ToString()).Value = ScanPulse.resultBPM.ToString() + " : " + ScanPulse.resultSat.ToString() + "%"
-        currentWorksheet.Range(Cells.Temperature + row.ToString()).Value = ScanPulse.resultBPM.ToString() + " : " + ScanTemp.result.ToString() + "°"
+        currentWorksheet.Range(Cells.PulseRate + row.ToString()).Value = ScanPulse.resultSat.ToString() + " : " + ScanPulse.resultBPM.ToString() + "%"
+        currentWorksheet.Range(Cells.Temperature + row.ToString()).Value = ScanTemp.result.ToString() + "°"
 
         excelApp.DisplayAlerts = False
 
