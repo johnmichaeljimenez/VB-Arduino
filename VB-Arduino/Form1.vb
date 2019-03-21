@@ -37,6 +37,7 @@
     End Sub
 
     Public Shared Sub SetMode(ByVal x As Integer)
+        Debug.Print("Set MODE " + x.ToString())
         scanMode = x
         activeForm.SerialPort1.WriteLine(x)
     End Sub
@@ -69,7 +70,7 @@
                         ScanPulse.activeForm.UpdateValues(spl(0), spl(1))
                     End If
                 Case 4
-
+                    ScanTemp.activeForm.UpdateValues(readSerial)
                 Case Else
 
             End Select

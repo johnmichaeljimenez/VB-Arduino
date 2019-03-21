@@ -5,6 +5,7 @@
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         Form1.SetMode(3)
+        Timer1.Stop()
     End Sub
 
     Private Sub ScanPulse_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -17,8 +18,8 @@
 
 
     Public Sub UpdateValues(ByVal n As String, ByVal m As String)
-        txtBPM.Text = n
-        txtSat.Text = m
+        txtBPM.Text = m
+        txtSat.Text = n
 
         resultBPM = CDec(n)
         resultSat = CDec(m)
@@ -26,7 +27,7 @@
     End Sub
 
     Private Sub btnNext_Click(sender As Object, e As EventArgs) Handles btnNext.Click
-        Results.Show()
+        ScanTemp.Show()
         Close()
     End Sub
 End Class

@@ -60,6 +60,7 @@ Module Utils
         currentWorksheet.Range(Cells.DateExamined + row.ToString()).Value = dt.ToShortDateString() + " " + dt.ToShortTimeString()
         currentWorksheet.Range(Cells.Height + row.ToString()).Value = ScanHeight.result.ToString() + " cm"
         currentWorksheet.Range(Cells.PulseRate + row.ToString()).Value = ScanPulse.resultBPM.ToString() + " : " + ScanPulse.resultSat.ToString() + "%"
+        currentWorksheet.Range(Cells.Temperature + row.ToString()).Value = ScanPulse.resultBPM.ToString() + " : " + ScanTemp.result.ToString() + "°"
 
         excelApp.DisplayAlerts = False
 

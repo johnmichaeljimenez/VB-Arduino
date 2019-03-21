@@ -34,18 +34,19 @@
         If n > 0 Then
             Form1.SetMode(0)
             btnNext.Enabled = True
+            Timer1.Stop()
         End If
     End Sub
 
     Private Sub btnNext_Click(sender As Object, e As EventArgs) Handles btnNext.Click
-        ScanPulse.Show()
+        ScanTemp.Show()
         Close()
     End Sub
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
-        If (result <= 0) Then
-            Form1.SetMode(1)
-        End If
+        'If (result <= 0) Then
+        Form1.SetMode(1)
+        'End If
 
     End Sub
 End Class

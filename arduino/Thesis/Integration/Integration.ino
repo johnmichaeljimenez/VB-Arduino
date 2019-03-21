@@ -1,3 +1,6 @@
+//A420
+//A521
+
 //LIBRARIES:
 //Height N/A
 //Weight
@@ -135,10 +138,15 @@ void loop()
     }
     else if (ch == 4) //Temperature
     {
-      Serial.print("Ambient = "); Serial.print(mlx.readAmbientTempC());
-      Serial.print("*C\tObject = "); Serial.print(mlx.readObjectTempC()); Serial.println("*C");
-      Serial.print("Ambient = "); Serial.print(mlx.readAmbientTempF());
-      Serial.print("*F\tObject = "); Serial.print(mlx.readObjectTempF()); Serial.println("*F");
+//      Serial.print("Ambient = "); Serial.print(mlx.readAmbientTempC());
+//      Serial.print("*C\tObject = "); Serial.print(mlx.readObjectTempC()); Serial.println("*C");
+//      Serial.print("Ambient = "); Serial.print(mlx.readAmbientTempF());
+//      Serial.print("*F\tObject = "); Serial.print(mlx.readObjectTempF()); Serial.println("*F");
+      Serial.print("$");
+      Serial.print(mlx.readObjectTempC());
+//      Serial.print(",");
+//      Serial.print(mlx.readObjectTempF());
+      Serial.println("#");
       Serial.println();
       ch = 0;
       delay(500);
