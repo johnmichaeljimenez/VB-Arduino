@@ -32,23 +32,21 @@ Public Class PersonalInfo
     End Sub
 
     Private Sub PersonalInfo_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        KillOSK()
-        Process.Start("osk")
+        HideKeyboard()
+        ShowKeyboard()
+        'Process.Start("osk")
 
+        cmbGender.SelectedIndex = 0
     End Sub
 
-    Sub KillOSK()
-        Dim proc = Process.GetProcessesByName("osk")
-        For i As Integer = 0 To proc.Count - 1
-            proc(i).Kill()
-        Next i
-    End Sub
 
     Private Sub PersonalInfo_FormClosed(sender As Object, e As FormClosedEventArgs) Handles MyBase.FormClosed
-        KillOSK()
+        HideKeyboard()
     End Sub
 
-    Private Sub PersonalInfo_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
-        KillOSK()
+    Private Sub FormClosingEvent(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
+        If e.CloseReason = CloseReason.UserClosing Then
+            Application.Exit()
+        End If
     End Sub
 End Class

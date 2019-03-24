@@ -59,14 +59,17 @@ Module Utils
         Dim dt As DateTime = DateTime.Now
         currentWorksheet.Range(Cells.DateExamined + row.ToString()).Value = dt.ToShortDateString() + " " + dt.ToShortTimeString()
         currentWorksheet.Range(Cells.Height + row.ToString()).Value = ScanHeight.result.ToString() + " cm"
+        currentWorksheet.Range(Cells.Weight + row.ToString()).Value = ScanWeight.result.ToString() + " g"
         currentWorksheet.Range(Cells.PulseRate + row.ToString()).Value = ScanPulse.resultSat.ToString() + " : " + ScanPulse.resultBPM.ToString() + "%"
-        currentWorksheet.Range(Cells.Temperature + row.ToString()).Value = ScanTemp.result.ToString() + "°"
+        currentWorksheet.Range(Cells.Temperature + row.ToString()).Value = ScanTemp.result.ToString() + " °C"
+        currentWorksheet.Range(Cells.BMI + row.ToString()).Value = Results.bmiResult
 
         excelApp.DisplayAlerts = False
 
         currentWorksheet.SaveAs(savePath)
         currentWorkbook.Close()
         excelApp.Quit()
+        System.Runtime.InteropServices.Marshal.ReleaseComObject(excelApp)
     End Sub
 
     Public Sub ReadData(ByVal f As String)
@@ -91,6 +94,19 @@ Module Utils
 
         currentWorkbook.Close()
         excelApp.Quit()
+        System.Runtime.InteropServices.Marshal.ReleaseComObject(excelApp)
+    End Sub
+
+    Public Sub ShowKeyboard()
+        Process.Start(New ProcessStartInfo(
+            ((Environment.GetFolderPath(Environment.SpecialFolder.System) + "\osk.exe"))))
+    End Sub
+
+    Public Sub HideKeyboard()
+        Dim proc = Process.GetProcessesByName("osk")
+        For i As Integer = 0 To proc.Count - 1
+            proc(i).Kill()
+        Next i
     End Sub
 
 End Module

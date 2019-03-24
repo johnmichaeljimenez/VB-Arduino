@@ -64,6 +64,7 @@
                 Case 1
                     ScanHeight.activeForm.UpdateValues(readSerial)
                 Case 2
+                    ScanWeight.activeForm.UpdateValues(readSerial)
                 Case 3
                     If readSerial.Contains(",") Then
                         Dim spl() As String = readSerial.Split(",")

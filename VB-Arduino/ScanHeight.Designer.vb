@@ -103,8 +103,8 @@ Partial Class ScanHeight
         Me.Label5.Font = New System.Drawing.Font("Roboto", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.White
         Me.Label5.Location = New System.Drawing.Point(14, 232)
-        Me.Label5.Size = New System.Drawing.Size(419, 48)
         Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(419, 48)
         Me.Label5.TabIndex = 7
         Me.Label5.Text = "Please stand straight and stable." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Do not jump or move during the measurement."
         '
@@ -132,16 +132,17 @@ Partial Class ScanHeight
         '
         'Timer1
         '
+        Me.Timer1.Interval = 5000
         '
         'Label6
         '
         Me.Label6.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Label6.Font = New System.Drawing.Font("Roboto", 16.0!, System.Drawing.FontStyle.Bold)
+        Me.Label6.Font = New System.Drawing.Font("Roboto", 20.0!, System.Drawing.FontStyle.Bold)
         Me.Label6.ForeColor = System.Drawing.Color.White
         Me.Label6.Location = New System.Drawing.Point(0, 24)
         Me.Label6.Margin = New System.Windows.Forms.Padding(3, 0, 3, 12)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(784, 37)
+        Me.Label6.Size = New System.Drawing.Size(802, 37)
         Me.Label6.TabIndex = 10
         Me.Label6.Text = "Height Measurement"
         Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft

@@ -22,6 +22,7 @@ Partial Class ScanWeight
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label5 = New System.Windows.Forms.Label()
@@ -30,6 +31,7 @@ Partial Class ScanWeight
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -68,32 +70,32 @@ Partial Class ScanWeight
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Roboto", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Font = New System.Drawing.Font("Roboto", 13.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.White
-        Me.Label3.Location = New System.Drawing.Point(230, 141)
+        Me.Label3.Location = New System.Drawing.Point(218, 141)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(33, 22)
+        Me.Label3.Size = New System.Drawing.Size(92, 22)
         Me.Label3.TabIndex = 15
-        Me.Label3.Text = "KG"
+        Me.Label3.Text = "Kilograms"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Roboto", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Font = New System.Drawing.Font("Roboto", 13.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.White
         Me.Label2.Location = New System.Drawing.Point(23, 141)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(42, 22)
+        Me.Label2.Size = New System.Drawing.Size(70, 22)
         Me.Label2.TabIndex = 14
-        Me.Label2.Text = "LBS"
+        Me.Label2.Text = "Pounds"
         '
         'TextBox2
         '
         Me.TextBox2.Font = New System.Drawing.Font("Roboto", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(234, 110)
+        Me.TextBox2.Location = New System.Drawing.Point(216, 110)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.ReadOnly = True
-        Me.TextBox2.Size = New System.Drawing.Size(47, 28)
+        Me.TextBox2.Size = New System.Drawing.Size(110, 28)
         Me.TextBox2.TabIndex = 12
         '
         'TextBox1
@@ -102,13 +104,13 @@ Partial Class ScanWeight
         Me.TextBox1.Location = New System.Drawing.Point(27, 110)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.ReadOnly = True
-        Me.TextBox1.Size = New System.Drawing.Size(53, 28)
+        Me.TextBox1.Size = New System.Drawing.Size(109, 28)
         Me.TextBox1.TabIndex = 11
         '
         'Label1
         '
         Me.Label1.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Label1.Font = New System.Drawing.Font("Roboto", 16.0!, System.Drawing.FontStyle.Bold)
+        Me.Label1.Font = New System.Drawing.Font("Roboto", 20.0!, System.Drawing.FontStyle.Bold)
         Me.Label1.ForeColor = System.Drawing.Color.White
         Me.Label1.Location = New System.Drawing.Point(0, 24)
         Me.Label1.Margin = New System.Windows.Forms.Padding(3, 0, 3, 12)
@@ -117,6 +119,11 @@ Partial Class ScanWeight
         Me.Label1.TabIndex = 10
         Me.Label1.Text = "Weight Measurement"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'Timer1
+        '
+        Me.Timer1.Enabled = True
+        Me.Timer1.Interval = 5000
         '
         'ScanWeight
         '
@@ -149,4 +156,5 @@ Partial Class ScanWeight
     Friend WithEvents TextBox2 As TextBox
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Label1 As Label
+    Friend WithEvents Timer1 As Timer
 End Class

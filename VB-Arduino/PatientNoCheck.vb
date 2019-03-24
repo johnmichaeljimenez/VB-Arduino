@@ -5,6 +5,8 @@
         grp1.Visible = True
         grp2.Visible = False
         existing = False
+        HideKeyboard()
+        ShowKeyboard()
     End Sub
 
     Private Sub btnNext_Click(sender As Object, e As EventArgs) Handles btnNext.Click
@@ -14,6 +16,7 @@
         Else
             existing = False
             PersonalInfo.patientNo = ""
+            HideKeyboard()
             PersonalInfo.Show()
             Close()
         End If
@@ -38,6 +41,7 @@
             'PersonalInfo.Show()
             existing = True
             Utils.ReadData(pn)
+            HideKeyboard()
             ScanHeight.Show()
             Close()
             Exit Sub
@@ -47,9 +51,19 @@
             PersonalInfo.patientNo = ""
             existing = False
             PersonalInfo.Show()
+            HideKeyboard()
             Close()
         End If
 
 
+    End Sub
+
+    Private Sub PatientNoCheck_FormClosed(sender As Object, e As FormClosedEventArgs) Handles MyBase.FormClosed
+    End Sub
+
+    Private Sub FormClosingEvent(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
+        If e.CloseReason = CloseReason.UserClosing Then
+            Application.Exit()
+        End If
     End Sub
 End Class

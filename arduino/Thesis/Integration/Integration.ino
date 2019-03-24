@@ -3,8 +3,14 @@
 
 //LIBRARIES:
 //Height N/A
+
 //Weight
 #include "HX711.h"
+HX711 scale;//5, 6);
+float calibration_factor = 2230; // this calibration factor is adjusted according to my load cell
+float units;
+float ounces;
+
 //Pulse N/A
 //Temperature
 #include <Wire.h>
@@ -14,17 +20,17 @@
 const int trigPin = 9;
 const int echoPin = 10;
 //Weight
+int readCount = 0;
+float totalWeight = 0;
 const int LOADCELL_DOUT_PIN = 2;
 const int LOADCELL_SCK_PIN = 3;
 //Pulse
-int Pulse = A0;
+int Pulse = A3;
 //Temperature N/A
 //VARIABLE:
 //Height
 long duration;
 int distance;
-//Weight
-HX711 scale;
 //Pulse
 const int numReadings = 5;
 int readings[numReadings];      // the readings from the analog input
@@ -40,8 +46,12 @@ void setup()
   //Height
   pinMode(trigPin, OUTPUT); // Sets the trigPin as an Output
   pinMode(echoPin, INPUT); // Sets the echoPin as an Input
+
   //Weight
+//  scale.begin(LOADCELL_DOUT_PIN, LOADCELL_SCK_PIN);
   scale.begin(LOADCELL_DOUT_PIN, LOADCELL_SCK_PIN);
+  scale.set_scale(2230); //CALIBRATION FACTOR
+  
   //Pulse
   for (int thisReading = 0; thisReading < numReadings; thisReading++)
   {
@@ -82,18 +92,50 @@ void loop()
     }
     else if (ch == 2) //Weight
     {
-      if (scale.is_ready())
-      {
-        long reading = scale.read();
-        Serial.print("HX711 reading: ");
-        Serial.println(reading);
-      }
-      else
-      {
-        Serial.println("HX711 not found.");
-      }
-      ch = 0;
-      delay(1000);
+//      if (scale.is_ready())
+//      {
+//        long reading = scale.read();
+////        Serial.print("HX711 reading: ");
+//        Serial.print("$");
+//        Serial.print(reading);
+//        Serial.println("#");
+//      }
+//      else
+//      {
+////        Serial.println("HX711 not found.");
+//      }
+
+//        Serial.print("Reading: ");
+        units = scale.get_units(), 10;
+        if (units < 0)
+        {
+          units = 0.00;
+        }
+        ounces = units * 0.035274;
+
+        if (units > 0)
+        {
+          totalWeight += units;
+          readCount += 1;
+//          Serial.print(readCount);
+//          Serial.print("-->");
+//          Serial.println(units);
+
+          if (readCount >= 3)
+          {
+            totalWeight = totalWeight/3;
+            Serial.print("$");
+            Serial.print(totalWeight);
+            Serial.println("#");
+            ch = 0;
+          }
+        }
+        
+//        Serial.print(" grams"); 
+//        Serial.print(" calibration_factor: ");
+//        Serial.print(calibration_factor);
+//        Serial.println();
+          delay(1000);
     }
     else if (ch == 3) //Pulse
     {
@@ -160,6 +202,8 @@ void loop()
     {
       ch = Serial.read()-48;//.toInt();
 //      Serial.println("new");
+      readCount = 0;
+      totalWeight = 0;
     }
   }
 }

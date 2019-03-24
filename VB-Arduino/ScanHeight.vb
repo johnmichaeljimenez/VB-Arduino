@@ -39,7 +39,7 @@
     End Sub
 
     Private Sub btnNext_Click(sender As Object, e As EventArgs) Handles btnNext.Click
-        ScanPulse.Show()
+        ScanWeight.Show()
         Close()
     End Sub
 
@@ -48,5 +48,10 @@
         Form1.SetMode(1)
         'End If
 
+    End Sub
+    Private Sub FormClosingEvent(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
+        If e.CloseReason = CloseReason.UserClosing Then
+            Application.Exit()
+        End If
     End Sub
 End Class

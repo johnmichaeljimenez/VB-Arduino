@@ -6,7 +6,7 @@ const int LOADCELL_SCK_PIN = 3;
 HX711 scale;
 
 void setup() {
-  Serial.begin(57600);
+  Serial.begin(9600);
   scale.begin(LOADCELL_DOUT_PIN, LOADCELL_SCK_PIN);
 }
 
@@ -15,8 +15,13 @@ void loop()
   if (scale.is_ready()) 
   {
     long reading = scale.read();
-    Serial.print("HX711 reading: ");
-    Serial.println(reading);
+  
+
+//    if (reading <= 200 && reading >= 0)  
+    {
+      Serial.print("HX711 reading: ");
+      Serial.println(reading);
+    }
   } 
   else 
   {
