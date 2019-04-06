@@ -63,8 +63,8 @@ Module Utils
         currentWorksheet.Range(Cells.DateExamined + row.ToString()).Value = dt.ToShortDateString() + " " + dt.ToShortTimeString()
         currentWorksheet.Range(Cells.Height + row.ToString()).Value = ScanHeight.result.ToString() + " cm"
         currentWorksheet.Range(Cells.Weight + row.ToString()).Value = (ScanWeight.result / 1000).ToString() + " kg"
-        currentWorksheet.Range(Cells.PulseRate + row.ToString()).Value = ScanPulse.resultSat.ToString() + " : " + ScanPulse.resultBPM.ToString() + "%"
-        currentWorksheet.Range(Cells.Temperature + row.ToString()).Value = ScanTemp.result.ToString() + " °C"
+        currentWorksheet.Range(Cells.PulseRate + row.ToString()).Value = ScanPulse.resultSat.ToString() + " : " + ScanPulse.resultBPM.ToString() + "% - (" + Results.GetPulseRemarks() + ")"
+        currentWorksheet.Range(Cells.Temperature + row.ToString()).Value = ScanTemp.result.ToString() + " °C (" + Results.GetTemperatureRemarks() + ")"
         currentWorksheet.Range(Cells.BMI + row.ToString()).Value = Results.bmiResult
 
         excelApp.DisplayAlerts = False

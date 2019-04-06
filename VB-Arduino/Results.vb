@@ -13,8 +13,8 @@ Public Class Results
         txtName.Text = PersonalInfo.firstName + " " + PersonalInfo.middleName + " " + PersonalInfo.surname + " " + PersonalInfo.namePrefix
         txtHeight.Text = ScanHeight.result.ToString() + " cm"
         txtWeight.Text = (ScanWeight.result.ToString() / 1000).ToString() + " kg"
-        txtPulseRate.Text = ScanPulse.resultSat.ToString() + "(" + ScanPulse.resultBPM.ToString() + "%)"
-        txtTemperature.Text = ScanTemp.result.ToString() + " °C"
+        txtPulseRate.Text = ScanPulse.resultSat.ToString() + "(" + ScanPulse.resultBPM.ToString() + "%) - " + GetPulseRemarks()
+        txtTemperature.Text = ScanTemp.result.ToString() + " °C (" + GetTemperatureRemarks() + ")"
         CalculateBMI()
     End Sub
 
@@ -24,6 +24,40 @@ Public Class Results
         Form1.activeForm.Show()
         Close()
     End Sub
+
+    Public Shared Function GetPulseRemarks() As String
+        If ScanPulse.resultSat <= 100 And ScanPulse.resultSat >= 97.1 Then
+            Return "Normal"
+        ElseIf ScanPulse.resultSat < 97.1 And ScanPulse.resultSat >= 90.1 Then
+            Return "Mild Hypoxemia"
+        ElseIf ScanPulse.resultSat < 90.1 And ScanPulse.resultSat >= 75.1 Then
+            Return "Moderate Hypoxemia"
+        ElseIf ScanPulse.resultSat < 75.1 Then
+            Return "Severe Hypoxemia"
+        End If
+
+        Return ""
+    End Function
+
+    Public Shared Function GetTemperatureRemarks() As String
+        If ScanTemp.result <= 42.5 And ScanTemp.result >= 39.5 Then
+            Return "Very High Fever"
+        ElseIf ScanTemp.result <= 39.4 And ScanTemp.result >= 38.6 Then
+            Return "High Fever"
+        ElseIf ScanTemp.result <= 38.5 And ScanTemp.result >= 38.1 Then
+            Return "Moderate Fever"
+        ElseIf ScanTemp.result <= 38 And ScanTemp.result >= 37.6 Then
+            Return "Light Fever"
+        ElseIf ScanTemp.result <= 37.5 And ScanTemp.result >= 37 Then
+            Return "Increased Temperature"
+        ElseIf ScanTemp.result <= 36.9 And ScanTemp.result >= 35.8 Then
+            Return "Normal"
+        ElseIf ScanTemp.result < 35.8 Then
+            Return "Low Temperature"
+        End If
+
+        Return ""
+    End Function
 
     Sub CalculateBMI()
         Dim kg, m As Decimal
