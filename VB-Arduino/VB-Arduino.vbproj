@@ -220,5 +220,17 @@
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\weight.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\height.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pulse.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\temperature.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

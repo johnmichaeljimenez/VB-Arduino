@@ -1,5 +1,8 @@
 ﻿Imports System.IO
 Module Utils
+    Declare Function Wow64DisableWow64FsRedirection Lib "kernel32" (ByRef oldvalue As Long) As Boolean
+    Declare Function Wow64EnableWow64FsRedirection Lib "kernel32" (ByRef oldvalue As Long) As Boolean
+    Private osk As String = "C:\Windows\System32\osk.exe"
 
     Dim progDir As String = Application.StartupPath + "/data/"
 
@@ -46,8 +49,8 @@ Module Utils
         While True
             Dim value As String = currentWorksheet.Range("A" + (row.ToString())).Value
             Debug.Print("row: A" + row.ToString() + "  value: " + value)
-            Empty = String.IsNullOrEmpty(value)
-            If Empty Then
+            empty = String.IsNullOrEmpty(value)
+            If empty Then
                 Debug.Print(">" + value)
                 Exit While
             End If
@@ -59,7 +62,7 @@ Module Utils
         Dim dt As DateTime = DateTime.Now
         currentWorksheet.Range(Cells.DateExamined + row.ToString()).Value = dt.ToShortDateString() + " " + dt.ToShortTimeString()
         currentWorksheet.Range(Cells.Height + row.ToString()).Value = ScanHeight.result.ToString() + " cm"
-        currentWorksheet.Range(Cells.Weight + row.ToString()).Value = ScanWeight.result.ToString() + " g"
+        currentWorksheet.Range(Cells.Weight + row.ToString()).Value = (ScanWeight.result / 1000).ToString() + " kg"
         currentWorksheet.Range(Cells.PulseRate + row.ToString()).Value = ScanPulse.resultSat.ToString() + " : " + ScanPulse.resultBPM.ToString() + "%"
         currentWorksheet.Range(Cells.Temperature + row.ToString()).Value = ScanTemp.result.ToString() + " °C"
         currentWorksheet.Range(Cells.BMI + row.ToString()).Value = Results.bmiResult
@@ -98,8 +101,21 @@ Module Utils
     End Sub
 
     Public Sub ShowKeyboard()
-        Process.Start(New ProcessStartInfo(
-            ((Environment.GetFolderPath(Environment.SpecialFolder.System) + "\osk.exe"))))
+        Dim path As String = (Environment.GetFolderPath(Environment.SpecialFolder.System) + "\osk.exe")
+        'MessageBox.Show(path)
+        'Process.Start(New ProcessStartInfo(
+        '    (Path)))
+        'Process.Start("C:\Windows\System32\osk.exe")
+
+        Dim old As Long
+        If Environment.Is64BitOperatingSystem Then
+            If Wow64DisableWow64FsRedirection(old) Then
+                Process.Start(osk)
+                Wow64EnableWow64FsRedirection(old)
+            End If
+        Else
+            Process.Start(osk)
+        End If
     End Sub
 
     Public Sub HideKeyboard()

@@ -4,6 +4,10 @@
     Public Shared result As Decimal
 
     Private Sub ScanWeight_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        WindowState = FormWindowState.Normal
+        StartPosition = FormStartPosition.Manual
+        Location = Screen.AllScreens(UBound(Screen.AllScreens)).Bounds.Location
+        WindowState = FormWindowState.Maximized
         activeForm = Me
         UpdateValues(0)
 
@@ -38,7 +42,7 @@
     End Sub
     Private Sub FormClosingEvent(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
         If e.CloseReason = CloseReason.UserClosing Then
-            Application.Exit()
+            'Application.Exit()
         End If
     End Sub
 End Class

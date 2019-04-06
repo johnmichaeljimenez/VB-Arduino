@@ -68,7 +68,7 @@ Partial Class Form1
         '
         'SerialPort1
         '
-        Me.SerialPort1.PortName = "COM8"
+        Me.SerialPort1.PortName = "COM4"
         '
         'Timer1
         '

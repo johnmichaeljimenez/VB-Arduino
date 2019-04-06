@@ -7,6 +7,10 @@
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         readSerial = ""
+        WindowState = FormWindowState.Normal
+        StartPosition = FormStartPosition.Manual
+        Location = Screen.AllScreens(UBound(Screen.AllScreens)).Bounds.Location
+        WindowState = FormWindowState.Maximized
 
 
         'PersonalInfo.patientNo = "00000006"
@@ -69,6 +73,8 @@
                     If readSerial.Contains(",") Then
                         Dim spl() As String = readSerial.Split(",")
                         ScanPulse.activeForm.UpdateValues(spl(0), spl(1))
+                    Else
+                        ScanPulse.activeForm.Timer1.Start()
                     End If
                 Case 4
                     ScanTemp.activeForm.UpdateValues(readSerial)

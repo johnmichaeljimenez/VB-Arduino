@@ -2,17 +2,21 @@
     Public Shared existing As Boolean
 
     Private Sub PatientNoCheck_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        WindowState = FormWindowState.Normal
+        StartPosition = FormStartPosition.Manual
+        Location = Screen.AllScreens(UBound(Screen.AllScreens)).Bounds.Location
+        WindowState = FormWindowState.Maximized
         grp1.Visible = True
         grp2.Visible = False
         existing = False
         HideKeyboard()
-        ShowKeyboard()
     End Sub
 
     Private Sub btnNext_Click(sender As Object, e As EventArgs) Handles btnNext.Click
         If rbYes.Checked Then
             grp1.Visible = False
             grp2.Visible = True
+            ShowKeyboard()
         Else
             existing = False
             PersonalInfo.patientNo = ""
@@ -63,7 +67,7 @@
 
     Private Sub FormClosingEvent(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
         If e.CloseReason = CloseReason.UserClosing Then
-            Application.Exit()
+            'Application.Exit()
         End If
     End Sub
 End Class

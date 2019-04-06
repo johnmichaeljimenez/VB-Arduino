@@ -6,6 +6,10 @@
     Private Sub ScanHeight_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'MessageBox.Show("")
         activeForm = Me
+        WindowState = FormWindowState.Normal
+        StartPosition = FormStartPosition.Manual
+        Location = Screen.AllScreens(UBound(Screen.AllScreens)).Bounds.Location
+        WindowState = FormWindowState.Maximized
         UpdateValues(0)
 
         Timer1.Start()
@@ -51,7 +55,7 @@
     End Sub
     Private Sub FormClosingEvent(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
         If e.CloseReason = CloseReason.UserClosing Then
-            Application.Exit()
+            'Application.Exit()
         End If
     End Sub
 End Class

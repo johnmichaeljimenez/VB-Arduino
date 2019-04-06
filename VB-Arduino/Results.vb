@@ -3,12 +3,16 @@ Public Class Results
     Public Shared bmiResult As String
 
     Private Sub Results_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        WindowState = FormWindowState.Normal
+        StartPosition = FormStartPosition.Manual
+        Location = Screen.AllScreens(UBound(Screen.AllScreens)).Bounds.Location
+        WindowState = FormWindowState.Maximized
         txtBirthday.Text = PersonalInfo.birthday
         txtBirthplace.Text = PersonalInfo.birthplace
         txtGender.Text = PersonalInfo.gender
         txtName.Text = PersonalInfo.firstName + " " + PersonalInfo.middleName + " " + PersonalInfo.surname + " " + PersonalInfo.namePrefix
         txtHeight.Text = ScanHeight.result.ToString() + " cm"
-        txtWeight.Text = ScanWeight.result.ToString() + " g"
+        txtWeight.Text = (ScanWeight.result.ToString() / 1000).ToString() + " kg"
         txtPulseRate.Text = ScanPulse.resultSat.ToString() + "(" + ScanPulse.resultBPM.ToString() + "%)"
         txtTemperature.Text = ScanTemp.result.ToString() + " °C"
         CalculateBMI()
@@ -48,7 +52,7 @@ Public Class Results
 
     Private Sub FormClosingEvent(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
         If e.CloseReason = CloseReason.UserClosing Then
-            Application.Exit()
+            'Application.Exit()
         End If
     End Sub
 End Class

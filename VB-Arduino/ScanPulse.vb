@@ -10,6 +10,10 @@
 
     Private Sub ScanPulse_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         activeForm = Me
+        WindowState = FormWindowState.Normal
+        StartPosition = FormStartPosition.Manual
+        Location = Screen.AllScreens(UBound(Screen.AllScreens)).Bounds.Location
+        WindowState = FormWindowState.Maximized
         UpdateValues(0, 0)
 
         Timer1.Start()
@@ -24,6 +28,8 @@
         resultBPM = CDec(n)
         resultSat = CDec(m)
         btnNext.Enabled = True
+        Timer1.Stop()
+        Form1.SetMode(0)
     End Sub
 
     Private Sub btnNext_Click(sender As Object, e As EventArgs) Handles btnNext.Click
@@ -32,7 +38,7 @@
     End Sub
     Private Sub FormClosingEvent(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
         If e.CloseReason = CloseReason.UserClosing Then
-            Application.Exit()
+            'Application.Exit()
         End If
     End Sub
 End Class

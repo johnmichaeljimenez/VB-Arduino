@@ -34,6 +34,10 @@ Public Class PersonalInfo
     Private Sub PersonalInfo_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         HideKeyboard()
         ShowKeyboard()
+        WindowState = FormWindowState.Normal
+        StartPosition = FormStartPosition.Manual
+        Location = Screen.AllScreens(UBound(Screen.AllScreens)).Bounds.Location
+        WindowState = FormWindowState.Maximized
         'Process.Start("osk")
 
         cmbGender.SelectedIndex = 0
@@ -46,7 +50,7 @@ Public Class PersonalInfo
 
     Private Sub FormClosingEvent(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
         If e.CloseReason = CloseReason.UserClosing Then
-            Application.Exit()
+            'Application.Exit()
         End If
     End Sub
 End Class

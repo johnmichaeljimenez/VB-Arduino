@@ -49,9 +49,11 @@ Partial Class ScanTemp
         '
         'PictureBox1
         '
+        Me.PictureBox1.Image = Global.VB_Arduino.My.Resources.Resources.temperature
         Me.PictureBox1.Location = New System.Drawing.Point(475, 60)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(292, 275)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox1.TabIndex = 32
         Me.PictureBox1.TabStop = False
         '
@@ -122,6 +124,7 @@ Partial Class ScanTemp
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(27, Byte), Integer), CType(CType(94, Byte), Integer), CType(CType(32, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(800, 480)
+        Me.ControlBox = False
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.PictureBox1)
