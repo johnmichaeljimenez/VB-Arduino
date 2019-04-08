@@ -55,7 +55,7 @@
             PersonalInfo.patientNo = ""
             existing = False
             PersonalInfo.Show()
-            HideKeyboard()
+            'HideKeyboard()
             Close()
         End If
 

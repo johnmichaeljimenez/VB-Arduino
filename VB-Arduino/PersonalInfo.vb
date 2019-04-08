@@ -14,6 +14,11 @@ Public Class PersonalInfo
             Exit Sub
         End If
 
+        If Utils.CheckExcelFile(txtPatientNo.Text) Then
+            MessageBox.Show("The Patient No. you entered is already in use by another patient.")
+            Exit Sub
+        End If
+
         patientNo = txtPatientNo.Text
         surname = txtLastName.Text
         firstName = txtFirstName.Text
