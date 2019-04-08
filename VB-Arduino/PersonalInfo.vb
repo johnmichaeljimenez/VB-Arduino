@@ -1,4 +1,5 @@
-﻿Imports VB_Arduino.Utils
+﻿Imports System.Text.RegularExpressions
+Imports VB_Arduino.Utils
 
 Public Class PersonalInfo
 
@@ -57,5 +58,16 @@ Public Class PersonalInfo
         If e.CloseReason = CloseReason.UserClosing Then
             'Application.Exit()
         End If
+    End Sub
+
+    Private Sub TextBox_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtContact.KeyPress
+        If Not Char.IsNumber(e.KeyChar) AndAlso Not Char.IsControl(e.KeyChar) Then
+            e.Handled = True
+        End If
+    End Sub
+
+    Private Sub TextBox_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtContact.TextChanged
+        Dim digitsOnly As Regex = New Regex("[^\d]")
+        txtContact.Text = digitsOnly.Replace(txtContact.Text, "")
     End Sub
 End Class

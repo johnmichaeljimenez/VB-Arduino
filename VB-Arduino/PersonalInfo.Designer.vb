@@ -312,6 +312,7 @@ Partial Class PersonalInfo
         '
         Me.txtContact.Font = New System.Drawing.Font("Roboto", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtContact.Location = New System.Drawing.Point(470, 151)
+        Me.txtContact.MaxLength = 11
         Me.txtContact.Name = "txtContact"
         Me.txtContact.Size = New System.Drawing.Size(162, 26)
         Me.txtContact.TabIndex = 16
