@@ -3,7 +3,11 @@
     Public Shared activeForm As ScanWeight
     Public Shared result As Decimal
 
+    Dim count As Integer
+
     Private Sub ScanWeight_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        count = 10
+        txtTimer.Text = count.ToString()
         WindowState = FormWindowState.Normal
         StartPosition = FormStartPosition.Manual
         Location = Screen.AllScreens(UBound(Screen.AllScreens)).Bounds.Location
@@ -38,7 +42,14 @@
     End Sub
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
-        Form1.SetMode(2)
+        If count = 0 Then
+            Form1.SetMode(2)
+            Exit Sub
+        End If
+
+        count -= 1
+        txtTimer.Text = count.ToString()
+        'Form1.SetMode(2)
     End Sub
     Private Sub FormClosingEvent(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
         If e.CloseReason = CloseReason.UserClosing Then

@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class ScanWeight
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class ScanWeight
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.Button1 = New System.Windows.Forms.Button()
@@ -32,6 +32,8 @@ Partial Class ScanWeight
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.txtTimer = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -125,7 +127,29 @@ Partial Class ScanWeight
         'Timer1
         '
         Me.Timer1.Enabled = True
-        Me.Timer1.Interval = 5000
+        Me.Timer1.Interval = 1000
+        '
+        'txtTimer
+        '
+        Me.txtTimer.AutoSize = True
+        Me.txtTimer.Font = New System.Drawing.Font("Roboto", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtTimer.ForeColor = System.Drawing.Color.White
+        Me.txtTimer.Location = New System.Drawing.Point(208, 376)
+        Me.txtTimer.Name = "txtTimer"
+        Me.txtTimer.Size = New System.Drawing.Size(21, 24)
+        Me.txtTimer.TabIndex = 21
+        Me.txtTimer.Text = "5"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Roboto", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.Color.White
+        Me.Label4.Location = New System.Drawing.Point(12, 376)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(190, 24)
+        Me.Label4.TabIndex = 20
+        Me.Label4.Text = "Reading will start in:"
         '
         'ScanWeight
         '
@@ -134,6 +158,8 @@ Partial Class ScanWeight
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(27, Byte), Integer), CType(CType(94, Byte), Integer), CType(CType(32, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(800, 480)
         Me.ControlBox = False
+        Me.Controls.Add(Me.txtTimer)
+        Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Label5)
@@ -160,4 +186,6 @@ Partial Class ScanWeight
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents Timer1 As Timer
+    Friend WithEvents txtTimer As Label
+    Friend WithEvents Label4 As Label
 End Class

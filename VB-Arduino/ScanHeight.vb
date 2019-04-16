@@ -3,7 +3,11 @@
     Public Shared activeForm As ScanHeight
     Public Shared result As Decimal
 
+    Dim count As Integer
+
     Private Sub ScanHeight_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        count = 5
+        txtTimer.Text = count.ToString()
         'MessageBox.Show("")
         activeForm = Me
         WindowState = FormWindowState.Normal
@@ -48,8 +52,14 @@
     End Sub
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+        If count = 0 Then
+            Form1.SetMode(1)
+            Exit Sub
+        End If
+
+        count -= 1
+        txtTimer.Text = count.ToString()
         'If (result <= 0) Then
-        Form1.SetMode(1)
         'End If
 
     End Sub
