@@ -22,6 +22,11 @@ Public Class PersonalInfo
         txtPatientNo.Text = digitsOnly.Replace(txtPatientNo.Text, "")
     End Sub
 
+    Private Sub Label14_Click(sender As Object, e As EventArgs) Handles Label14.Click
+        PatientNoCheck.Show()
+        Close()
+    End Sub
+
     Private Sub btnNext_Click(sender As Object, e As EventArgs) Handles btnNext.Click
         If txtPatientNo.Text.Length <> 8 Then
             MsgBox("Patient No. should be 8 digits.")

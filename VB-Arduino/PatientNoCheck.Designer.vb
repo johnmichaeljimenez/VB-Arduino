@@ -34,6 +34,7 @@ Partial Class PatientNoCheck
         Me.btnSubmit = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.FlowLayoutPanel1.SuspendLayout()
         Me.grp1.SuspendLayout()
         Me.grp2.SuspendLayout()
@@ -59,7 +60,7 @@ Partial Class PatientNoCheck
         Me.grp1.Controls.Add(Me.btnNext)
         Me.grp1.Location = New System.Drawing.Point(3, 3)
         Me.grp1.Name = "grp1"
-        Me.grp1.Size = New System.Drawing.Size(412, 76)
+        Me.grp1.Size = New System.Drawing.Size(451, 76)
         Me.grp1.TabIndex = 2
         '
         'Label1
@@ -70,7 +71,7 @@ Partial Class PatientNoCheck
         Me.Label1.ForeColor = System.Drawing.Color.White
         Me.Label1.Location = New System.Drawing.Point(3, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(339, 24)
+        Me.Label1.Size = New System.Drawing.Size(376, 24)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Do you have an existing Patient No. ?"
         '
@@ -81,7 +82,7 @@ Partial Class PatientNoCheck
         Me.rbYes.ForeColor = System.Drawing.Color.White
         Me.rbYes.Location = New System.Drawing.Point(3, 37)
         Me.rbYes.Name = "rbYes"
-        Me.rbYes.Size = New System.Drawing.Size(61, 28)
+        Me.rbYes.Size = New System.Drawing.Size(63, 28)
         Me.rbYes.TabIndex = 1
         Me.rbYes.TabStop = True
         Me.rbYes.Text = "Yes"
@@ -92,9 +93,9 @@ Partial Class PatientNoCheck
         Me.rbNo.AutoSize = True
         Me.rbNo.Font = New System.Drawing.Font("Roboto", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.rbNo.ForeColor = System.Drawing.Color.White
-        Me.rbNo.Location = New System.Drawing.Point(70, 37)
+        Me.rbNo.Location = New System.Drawing.Point(72, 37)
         Me.rbNo.Name = "rbNo"
-        Me.rbNo.Size = New System.Drawing.Size(53, 28)
+        Me.rbNo.Size = New System.Drawing.Size(55, 28)
         Me.rbNo.TabIndex = 2
         Me.rbNo.TabStop = True
         Me.rbNo.Text = "No"
@@ -108,7 +109,7 @@ Partial Class PatientNoCheck
         Me.btnNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnNext.Font = New System.Drawing.Font("Roboto", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnNext.ForeColor = System.Drawing.Color.White
-        Me.btnNext.Location = New System.Drawing.Point(129, 37)
+        Me.btnNext.Location = New System.Drawing.Point(133, 37)
         Me.btnNext.Name = "btnNext"
         Me.btnNext.Size = New System.Drawing.Size(75, 36)
         Me.btnNext.TabIndex = 3
@@ -124,7 +125,7 @@ Partial Class PatientNoCheck
         Me.grp2.Controls.Add(Me.btnSubmit)
         Me.grp2.Location = New System.Drawing.Point(3, 85)
         Me.grp2.Name = "grp2"
-        Me.grp2.Size = New System.Drawing.Size(380, 76)
+        Me.grp2.Size = New System.Drawing.Size(412, 76)
         Me.grp2.TabIndex = 3
         '
         'Label2
@@ -135,7 +136,7 @@ Partial Class PatientNoCheck
         Me.Label2.ForeColor = System.Drawing.Color.White
         Me.Label2.Location = New System.Drawing.Point(3, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(268, 24)
+        Me.Label2.Size = New System.Drawing.Size(300, 24)
         Me.Label2.TabIndex = 0
         Me.Label2.Text = "Please enter your Patient No."
         '
@@ -183,6 +184,17 @@ Partial Class PatientNoCheck
         Me.Panel1.Size = New System.Drawing.Size(788, 157)
         Me.Panel1.TabIndex = 5
         '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Roboto", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.Color.White
+        Me.Label4.Location = New System.Drawing.Point(12, 9)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(57, 24)
+        Me.Label4.TabIndex = 6
+        Me.Label4.Text = "Back"
+        '
         'PatientNoCheck
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -190,6 +202,7 @@ Partial Class PatientNoCheck
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(784, 442)
         Me.ControlBox = False
+        Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Label3)
         Me.Name = "PatientNoCheck"
@@ -203,6 +216,7 @@ Partial Class PatientNoCheck
         Me.grp2.PerformLayout()
         Me.Panel1.ResumeLayout(False)
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -218,4 +232,5 @@ Partial Class PatientNoCheck
     Friend WithEvents txtPatientNo As TextBox
     Friend WithEvents Label3 As Label
     Friend WithEvents Panel1 As Panel
+    Friend WithEvents Label4 As Label
 End Class

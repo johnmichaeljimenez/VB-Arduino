@@ -12,10 +12,12 @@ Public Class PatientNoCheck
         grp2.Visible = False
         existing = False
         HideKeyboard()
+        Label4.Visible = False
     End Sub
 
     Private Sub btnNext_Click(sender As Object, e As EventArgs) Handles btnNext.Click
         If rbYes.Checked Then
+            Label4.Visible = True
             grp1.Visible = False
             grp2.Visible = True
             ShowKeyboard()
@@ -83,5 +85,12 @@ Public Class PatientNoCheck
     Private Sub TextBox_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtPatientNo.TextChanged
         Dim digitsOnly As Regex = New Regex("[^\d]")
         txtPatientNo.Text = digitsOnly.Replace(txtPatientNo.Text, "")
+    End Sub
+
+    Private Sub Label4_Click(sender As Object, e As EventArgs) Handles Label4.Click
+        Label4.Visible = False
+        grp1.Visible = True
+        grp2.Visible = False
+        HideKeyboard()
     End Sub
 End Class

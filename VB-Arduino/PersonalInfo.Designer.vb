@@ -48,6 +48,7 @@ Partial Class PersonalInfo
         Me.Label10 = New System.Windows.Forms.Label()
         Me.btnNext = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label14 = New System.Windows.Forms.Label()
         Me.FlowLayoutPanel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -93,7 +94,7 @@ Partial Class PersonalInfo
         Me.Label11.Location = New System.Drawing.Point(15, 20)
         Me.Label11.Margin = New System.Windows.Forms.Padding(3, 0, 15, 0)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(91, 18)
+        Me.Label11.Size = New System.Drawing.Size(89, 18)
         Me.Label11.TabIndex = 19
         Me.Label11.Text = "Patient No.*"
         '
@@ -101,7 +102,7 @@ Partial Class PersonalInfo
         '
         Me.FlowLayoutPanel1.SetFlowBreak(Me.txtPatientNo, True)
         Me.txtPatientNo.Font = New System.Drawing.Font("Roboto", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPatientNo.Location = New System.Drawing.Point(124, 23)
+        Me.txtPatientNo.Location = New System.Drawing.Point(122, 23)
         Me.txtPatientNo.MaxLength = 8
         Me.txtPatientNo.Name = "txtPatientNo"
         Me.txtPatientNo.Size = New System.Drawing.Size(162, 26)
@@ -155,14 +156,14 @@ Partial Class PersonalInfo
         Me.Label4.Location = New System.Drawing.Point(456, 52)
         Me.Label4.Margin = New System.Windows.Forms.Padding(3, 0, 15, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(99, 18)
+        Me.Label4.Size = New System.Drawing.Size(97, 18)
         Me.Label4.TabIndex = 5
         Me.Label4.Text = "Middle Name"
         '
         'txtMiddleName
         '
         Me.txtMiddleName.Font = New System.Drawing.Font("Roboto", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtMiddleName.Location = New System.Drawing.Point(573, 55)
+        Me.txtMiddleName.Location = New System.Drawing.Point(571, 55)
         Me.txtMiddleName.Name = "txtMiddleName"
         Me.txtMiddleName.Size = New System.Drawing.Size(73, 26)
         Me.txtMiddleName.TabIndex = 6
@@ -172,17 +173,17 @@ Partial Class PersonalInfo
         Me.Label12.AutoSize = True
         Me.Label12.Font = New System.Drawing.Font("Roboto", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label12.ForeColor = System.Drawing.Color.White
-        Me.Label12.Location = New System.Drawing.Point(652, 52)
+        Me.Label12.Location = New System.Drawing.Point(650, 52)
         Me.Label12.Margin = New System.Windows.Forms.Padding(3, 0, 15, 0)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(48, 18)
+        Me.Label12.Size = New System.Drawing.Size(45, 18)
         Me.Label12.TabIndex = 21
         Me.Label12.Text = "Prefix"
         '
         'txtNamePrefix
         '
         Me.txtNamePrefix.Font = New System.Drawing.Font("Roboto", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtNamePrefix.Location = New System.Drawing.Point(718, 55)
+        Me.txtNamePrefix.Location = New System.Drawing.Point(713, 55)
         Me.txtNamePrefix.Name = "txtNamePrefix"
         Me.txtNamePrefix.Size = New System.Drawing.Size(49, 26)
         Me.txtNamePrefix.TabIndex = 22
@@ -195,7 +196,7 @@ Partial Class PersonalInfo
         Me.Label5.Location = New System.Drawing.Point(15, 84)
         Me.Label5.Margin = New System.Windows.Forms.Padding(3, 0, 15, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(180, 18)
+        Me.Label5.Size = New System.Drawing.Size(176, 18)
         Me.Label5.TabIndex = 8
         Me.Label5.Text = "Birthday* (MM/DD/YYYY)"
         '
@@ -203,7 +204,7 @@ Partial Class PersonalInfo
         '
         Me.dtBirthday.Font = New System.Drawing.Font("Roboto", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.dtBirthday.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtBirthday.Location = New System.Drawing.Point(213, 87)
+        Me.dtBirthday.Location = New System.Drawing.Point(209, 87)
         Me.dtBirthday.MaxDate = New Date(2018, 12, 31, 0, 0, 0, 0)
         Me.dtBirthday.MinDate = New Date(1920, 1, 1, 0, 0, 0, 0)
         Me.dtBirthday.Name = "dtBirthday"
@@ -216,10 +217,10 @@ Partial Class PersonalInfo
         Me.Label13.AutoSize = True
         Me.Label13.Font = New System.Drawing.Font("Roboto", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label13.ForeColor = System.Drawing.Color.White
-        Me.Label13.Location = New System.Drawing.Point(419, 84)
+        Me.Label13.Location = New System.Drawing.Point(415, 84)
         Me.Label13.Margin = New System.Windows.Forms.Padding(3, 0, 15, 0)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(84, 18)
+        Me.Label13.Size = New System.Drawing.Size(81, 18)
         Me.Label13.TabIndex = 23
         Me.Label13.Text = "Birthplace*"
         '
@@ -227,7 +228,7 @@ Partial Class PersonalInfo
         '
         Me.FlowLayoutPanel1.SetFlowBreak(Me.txtBirthPlace, True)
         Me.txtBirthPlace.Font = New System.Drawing.Font("Roboto", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtBirthPlace.Location = New System.Drawing.Point(521, 87)
+        Me.txtBirthPlace.Location = New System.Drawing.Point(514, 87)
         Me.txtBirthPlace.Name = "txtBirthPlace"
         Me.txtBirthPlace.Size = New System.Drawing.Size(162, 26)
         Me.txtBirthPlace.TabIndex = 24
@@ -240,7 +241,7 @@ Partial Class PersonalInfo
         Me.Label6.Location = New System.Drawing.Point(15, 116)
         Me.Label6.Margin = New System.Windows.Forms.Padding(3, 0, 15, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(63, 18)
+        Me.Label6.Size = New System.Drawing.Size(61, 18)
         Me.Label6.TabIndex = 9
         Me.Label6.Text = "Gender*"
         '
@@ -250,7 +251,7 @@ Partial Class PersonalInfo
         Me.cmbGender.Font = New System.Drawing.Font("Roboto", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmbGender.FormattingEnabled = True
         Me.cmbGender.Items.AddRange(New Object() {"Male", "Female"})
-        Me.cmbGender.Location = New System.Drawing.Point(96, 119)
+        Me.cmbGender.Location = New System.Drawing.Point(94, 119)
         Me.cmbGender.Name = "cmbGender"
         Me.cmbGender.Size = New System.Drawing.Size(121, 26)
         Me.cmbGender.TabIndex = 10
@@ -260,10 +261,10 @@ Partial Class PersonalInfo
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Roboto", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.Color.White
-        Me.Label7.Location = New System.Drawing.Point(223, 116)
+        Me.Label7.Location = New System.Drawing.Point(221, 116)
         Me.Label7.Margin = New System.Windows.Forms.Padding(3, 0, 15, 0)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(70, 18)
+        Me.Label7.Size = New System.Drawing.Size(69, 18)
         Me.Label7.TabIndex = 11
         Me.Label7.Text = "Address*"
         '
@@ -271,7 +272,7 @@ Partial Class PersonalInfo
         '
         Me.FlowLayoutPanel1.SetFlowBreak(Me.txtAddress, True)
         Me.txtAddress.Font = New System.Drawing.Font("Roboto", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtAddress.Location = New System.Drawing.Point(311, 119)
+        Me.txtAddress.Location = New System.Drawing.Point(308, 119)
         Me.txtAddress.Name = "txtAddress"
         Me.txtAddress.Size = New System.Drawing.Size(162, 26)
         Me.txtAddress.TabIndex = 12
@@ -284,14 +285,14 @@ Partial Class PersonalInfo
         Me.Label8.Location = New System.Drawing.Point(15, 148)
         Me.Label8.Margin = New System.Windows.Forms.Padding(3, 0, 15, 0)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(131, 18)
+        Me.Label8.Size = New System.Drawing.Size(127, 18)
         Me.Label8.TabIndex = 13
         Me.Label8.Text = "City/Municipality*"
         '
         'txtCity
         '
         Me.txtCity.Font = New System.Drawing.Font("Roboto", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCity.Location = New System.Drawing.Point(164, 151)
+        Me.txtCity.Location = New System.Drawing.Point(160, 151)
         Me.txtCity.Name = "txtCity"
         Me.txtCity.Size = New System.Drawing.Size(162, 26)
         Me.txtCity.TabIndex = 14
@@ -301,17 +302,17 @@ Partial Class PersonalInfo
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Roboto", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.ForeColor = System.Drawing.Color.White
-        Me.Label9.Location = New System.Drawing.Point(332, 148)
+        Me.Label9.Location = New System.Drawing.Point(328, 148)
         Me.Label9.Margin = New System.Windows.Forms.Padding(3, 0, 15, 0)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(120, 18)
+        Me.Label9.Size = New System.Drawing.Size(118, 18)
         Me.Label9.TabIndex = 15
         Me.Label9.Text = "Contact Number"
         '
         'txtContact
         '
         Me.txtContact.Font = New System.Drawing.Font("Roboto", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtContact.Location = New System.Drawing.Point(470, 151)
+        Me.txtContact.Location = New System.Drawing.Point(464, 151)
         Me.txtContact.MaxLength = 11
         Me.txtContact.Name = "txtContact"
         Me.txtContact.Size = New System.Drawing.Size(162, 26)
@@ -325,7 +326,7 @@ Partial Class PersonalInfo
         Me.Label10.Location = New System.Drawing.Point(15, 180)
         Me.Label10.Margin = New System.Windows.Forms.Padding(3, 0, 15, 0)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(231, 18)
+        Me.Label10.Size = New System.Drawing.Size(224, 18)
         Me.Label10.TabIndex = 18
         Me.Label10.Text = "*Please fill out all required fields"
         '
@@ -336,7 +337,7 @@ Partial Class PersonalInfo
         Me.btnNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnNext.Font = New System.Drawing.Font("Roboto", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnNext.ForeColor = System.Drawing.Color.White
-        Me.btnNext.Location = New System.Drawing.Point(264, 183)
+        Me.btnNext.Location = New System.Drawing.Point(257, 183)
         Me.btnNext.Name = "btnNext"
         Me.btnNext.Size = New System.Drawing.Size(75, 30)
         Me.btnNext.TabIndex = 17
@@ -356,6 +357,17 @@ Partial Class PersonalInfo
         Me.Label1.Text = "Personal Information"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
+        'Label14
+        '
+        Me.Label14.AutoSize = True
+        Me.Label14.Font = New System.Drawing.Font("Roboto", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label14.ForeColor = System.Drawing.Color.White
+        Me.Label14.Location = New System.Drawing.Point(5, 4)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(57, 24)
+        Me.Label14.TabIndex = 7
+        Me.Label14.Text = "Back"
+        '
         'PersonalInfo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -365,12 +377,14 @@ Partial Class PersonalInfo
         Me.ControlBox = False
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.FlowLayoutPanel1)
+        Me.Controls.Add(Me.Label14)
         Me.Name = "PersonalInfo"
         Me.Text = "PersonalInfo"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.FlowLayoutPanel1.ResumeLayout(False)
         Me.FlowLayoutPanel1.PerformLayout()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -400,4 +414,5 @@ Partial Class PersonalInfo
     Friend WithEvents txtNamePrefix As TextBox
     Friend WithEvents Label13 As Label
     Friend WithEvents txtBirthPlace As TextBox
+    Friend WithEvents Label14 As Label
 End Class
