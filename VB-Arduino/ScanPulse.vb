@@ -25,8 +25,8 @@
         txtBPM.Text = m
         txtSat.Text = n
 
-        resultBPM = CDec(n)
-        resultSat = CDec(m)
+        resultBPM = CDec(m)
+        resultSat = CDec(n)
         btnNext.Enabled = True
         Timer1.Stop()
         Form1.SetMode(0)
