@@ -178,7 +178,7 @@ Partial Class PersonalInfo
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(45, 18)
         Me.Label12.TabIndex = 21
-        Me.Label12.Text = "Prefix"
+        Me.Label12.Text = "Suffix"
         '
         'txtNamePrefix
         '
