@@ -9,7 +9,25 @@ Public Class PersonalInfo
     Public Shared gender As String
     Public Shared address, city, contactNo As String
 
+
+
+    Private Sub txtPatientNo_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtPatientNo.KeyPress
+        If Not Char.IsNumber(e.KeyChar) AndAlso Not Char.IsControl(e.KeyChar) Then
+            e.Handled = True
+        End If
+    End Sub
+
+    Private Sub txtPatientNo_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtPatientNo.TextChanged
+        Dim digitsOnly As Regex = New Regex("[^\d]")
+        txtPatientNo.Text = digitsOnly.Replace(txtPatientNo.Text, "")
+    End Sub
+
     Private Sub btnNext_Click(sender As Object, e As EventArgs) Handles btnNext.Click
+        If txtPatientNo.Text.Length <> 8 Then
+            MsgBox("Patient No. should be 8 digits.")
+            Exit Sub
+        End If
+
         If txtPatientNo.Text = "" Or txtLastName.Text = "" Or txtFirstName.Text = "" Or txtBirthPlace.Text = "" Or txtAddress.Text = "" Or txtCity.Text = "" Then
             MsgBox("Please fill up all required fields (*)")
             Exit Sub

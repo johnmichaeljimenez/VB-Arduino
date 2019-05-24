@@ -1,4 +1,6 @@
-﻿Public Class PatientNoCheck
+﻿Imports System.Text.RegularExpressions
+
+Public Class PatientNoCheck
     Public Shared existing As Boolean
 
     Private Sub PatientNoCheck_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -69,5 +71,17 @@
         If e.CloseReason = CloseReason.UserClosing Then
             'Application.Exit()
         End If
+    End Sub
+
+
+    Private Sub TextBox_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtPatientNo.KeyPress
+        If Not Char.IsNumber(e.KeyChar) AndAlso Not Char.IsControl(e.KeyChar) Then
+            e.Handled = True
+        End If
+    End Sub
+
+    Private Sub TextBox_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtPatientNo.TextChanged
+        Dim digitsOnly As Regex = New Regex("[^\d]")
+        txtPatientNo.Text = digitsOnly.Replace(txtPatientNo.Text, "")
     End Sub
 End Class
