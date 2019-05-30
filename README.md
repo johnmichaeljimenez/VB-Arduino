@@ -1,4 +1,4 @@
-# VB-Arduino
+# Integrated Healthcare Monitoring Device
 Healthcare Monitoring System using Arduino and Visual Basic.NET
 
 Features:
